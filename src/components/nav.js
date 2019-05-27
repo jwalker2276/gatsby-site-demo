@@ -2,18 +2,51 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
 
+const NavWrapper = styled.nav`
+  grid-row: 2 / -1;
+  grid-column: 1 / -1;
+  height: 100%;
+  background-color: red;
+`;
+
+const NavList = styled.ul`
+  list-style: none;
+  margin: 0;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  padding: 16px;
+  box-sizing: border-box;
+`;
+
+const NavListItem = styled.li`
+  padding-right: 30px;
+`;
+
+const StyledNavLink = styled(props => <Link {...props} />)`
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+`;
+
 const Nav = () => (
-  <ul>
-    <li>
-      <Link to="/">Home</Link>
-    </li>
-    <li>
-      <Link to="/about">About</Link>
-    </li>
-    <li>
-      <Link to="/contact">Contact</Link>
-    </li>
-  </ul>
+  <NavWrapper>
+    <NavList>
+      <NavListItem>
+        <StyledNavLink to="/">Home</StyledNavLink>
+      </NavListItem>
+      <NavListItem>
+        <StyledNavLink to="/about">About</StyledNavLink>
+      </NavListItem>
+      <NavListItem>
+        <StyledNavLink to="/contact">Contact</StyledNavLink>
+      </NavListItem>
+      <NavListItem>
+        <StyledNavLink to="/cars">Cars</StyledNavLink>
+      </NavListItem>
+    </NavList>
+  </NavWrapper>
 );
 
 export default Nav;

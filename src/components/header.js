@@ -12,10 +12,18 @@ import Nav from "../components/nav";
 // Styles
 const HeaderWrapper = styled.header`
   display: grid;
+  grid-template-rows: 100px 80px;
+  align-items: center;
+`;
+
+const HeaderTop = styled.div`
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  display: grid;
   grid-template-columns: 1fr 40%;
   align-items: center;
   background-color: black;
-  height: 100px;
+  height: 100%;
 `;
 
 const HeaderLeft = styled.div`
@@ -69,37 +77,39 @@ const SocialIconsWrapper = styled.div`
 // Layout
 const Header = () => (
   <HeaderWrapper>
-    <HeaderLeft>
-      <StyledLink to="/">Downshift</StyledLink>
-    </HeaderLeft>
-    <HeaderRight>
-      <CallInfoWrapper>
-        <CallInfoTop>Call Now</CallInfoTop>
-        <CallInfoBottom>1-895-331-4517</CallInfoBottom>
-      </CallInfoWrapper>
-      <SocialIconsWrapper>
-        <SocialIcon
-          iconLink="https://www.youtube.com"
-          iconImage={youtubeIcon}
-          iconName="youtube"
-        />
-        <SocialIcon
-          iconLink="https://www.instagram.com"
-          iconImage={instagramIcon}
-          iconName="instagram"
-        />
-        <SocialIcon
-          iconLink="https://www.twitter.com"
-          iconImage={twitterIcon}
-          iconName="twitter"
-        />
-        <SocialIcon
-          iconLink="https://www.facebook.com"
-          iconImage={facebookIcon}
-          iconName="facebook"
-        />
-      </SocialIconsWrapper>
-    </HeaderRight>
+    <HeaderTop>
+      <HeaderLeft>
+        <StyledLink to="/">Downshift</StyledLink>
+      </HeaderLeft>
+      <HeaderRight>
+        <CallInfoWrapper>
+          <CallInfoTop>Call Now</CallInfoTop>
+          <CallInfoBottom>1-895-331-4517</CallInfoBottom>
+        </CallInfoWrapper>
+        <SocialIconsWrapper>
+          <SocialIcon
+            iconLink="https://www.youtube.com"
+            iconImage={youtubeIcon}
+            iconName="youtube"
+          />
+          <SocialIcon
+            iconLink="https://www.instagram.com"
+            iconImage={instagramIcon}
+            iconName="instagram"
+          />
+          <SocialIcon
+            iconLink="https://www.twitter.com"
+            iconImage={twitterIcon}
+            iconName="twitter"
+          />
+          <SocialIcon
+            iconLink="https://www.facebook.com"
+            iconImage={facebookIcon}
+            iconName="facebook"
+          />
+        </SocialIconsWrapper>
+      </HeaderRight>
+    </HeaderTop>
     <Nav />
   </HeaderWrapper>
 );
