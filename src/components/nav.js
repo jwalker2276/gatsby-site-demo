@@ -40,10 +40,13 @@ const Nav = () => (
         <StyledNavLink to="/about">About</StyledNavLink>
       </NavListItem>
       <NavListItem>
-        <StyledNavLink to="/contact">Contact</StyledNavLink>
+        <StyledNavLink to="/services">Services</StyledNavLink>
       </NavListItem>
       <NavListItem>
         <StyledNavLink to="/cars">Cars</StyledNavLink>
+      </NavListItem>
+      <NavListItem>
+        <StyledNavLink to="/contact">Contact</StyledNavLink>
       </NavListItem>
     </NavList>
   </NavWrapper>
