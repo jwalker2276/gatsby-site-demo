@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import Layout from "../components/layout";
 import GlobalStyle from "../components/global";
 import Hero from "../components/hero";

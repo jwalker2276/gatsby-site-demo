@@ -27,7 +27,9 @@ export default ServiceAds;
 
 // Styled Components
 
-const Section = styled.section``;
+const Section = styled.section`
+  box-sizing: content-box;
+`;
 
 const SectionTitle = styled.h1`
   font-size: 28px;
@@ -37,7 +39,7 @@ const SectionTitle = styled.h1`
 
 const AdsWrapper = styled.div`
   display: grid;
-  grid-template: 50% 50% / 60% 40%;
+  grid-template: 1fr 1fr / 3fr 2fr;
   height: 450px;
   grid-gap: 15px;
 `;
