@@ -1,11 +1,11 @@
 import React from "react";
-import Layout from "../components/layout";
-import GlobalStyle from "../components/global";
-import Hero from "../components/hero";
-import ServiceAds from "../components/service-ads";
-import ServicesSmall from "../components/services-small";
-import AboutSmall from "../components/about-small";
-import ContactSmall from "../components/contact-form-small";
+import Layout from "../components/common/layout";
+import GlobalStyle from "../components/common/global";
+import Hero from "../components/home/hero";
+import ServiceAds from "../components/home/service-ads";
+import ServicesSmall from "../components/home/services";
+import AboutSmall from "../components/home/about";
+import ContactSmall from "../components/home/contact";
 
 const Index = () => (
   <>

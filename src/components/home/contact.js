@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useStaticQuery, graphql } from "gatsby";
 
-const ContactFormSmall = () => {
+const Contact = () => {
   const data = useStaticQuery(graphql`
     query FormQuery {
       site {
@@ -48,6 +48,8 @@ const ContactFormSmall = () => {
   );
 };
 
+export default Contact;
+
 const Section = styled.section`
   display: grid;
   grid-template: 1fr / 3fr 2fr;
@@ -82,5 +84,3 @@ const FormInput = styled.input`
 const FormButton = styled.button`
   cursor: pointer;
 `;
-
-export default ContactFormSmall;

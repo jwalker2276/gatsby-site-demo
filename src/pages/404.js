@@ -1,5 +1,5 @@
 import React from "react";
-import GlobalStyle from "../components/global";
+import GlobalStyle from "../components/common/global";
 
 const NotFoundPage = () => (
   <>

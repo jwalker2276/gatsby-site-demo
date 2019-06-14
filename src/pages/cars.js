@@ -1,6 +1,6 @@
 import React from "react";
-import Layout from "../components/layout";
-import GlobalStyle from "../components/global";
+import Layout from "../components/common/layout";
+import GlobalStyle from "../components/common/global";
 
 const Cars = () => (
   <>

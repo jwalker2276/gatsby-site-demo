@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { graphql, useStaticQuery } from "gatsby";
 import Img from "gatsby-image";
 
-const AboutSmall = () => {
+const About = () => {
   const data = useStaticQuery(graphql`
     query AboutQuery {
       file(relativePath: { regex: "/aboutpicturesmall/" }) {
@@ -37,6 +37,8 @@ const AboutSmall = () => {
   );
 };
 
+export default About;
+
 const Section = styled.section`
   display: grid;
   grid-template: 1fr / 3fr 2fr;
@@ -60,5 +62,3 @@ const SectionTitle = styled.h1`
 const SectionParagraph = styled.p`
   width: 35em;
 `;
-
-export default AboutSmall;

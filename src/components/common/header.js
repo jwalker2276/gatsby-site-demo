@@ -3,11 +3,11 @@ import React from "react";
 import styled from "styled-components";
 import { Link, useStaticQuery, graphql } from "gatsby";
 import SocialIcon from "./social-icon";
-import facebookIcon from "../images/icon-facebook.svg";
-import twitterIcon from "../images/icon-twitter.svg";
-import instagramIcon from "../images/icon-insta.svg";
-import youtubeIcon from "../images/icon-youtube.svg";
-import Nav from "../components/nav";
+import facebookIcon from "../../images/icon-facebook.svg";
+import twitterIcon from "../../images/icon-twitter.svg";
+import instagramIcon from "../../images/icon-insta.svg";
+import youtubeIcon from "../../images/icon-youtube.svg";
+import Nav from "./nav";
 
 // Layout
 const Header = () => {

@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
-import ServiceCard from "../components/service-card";
-import engineImg from "../images/engine2.jpg";
-import tuningImg from "../images/tuning.jpg";
-import brakesImg from "../images/brakes.jpg";
-import suspensionImg from "../images/suspension.jpg";
+import ServiceCard from "./service-card";
+import engineImg from "../../images/engine2.jpg";
+import tuningImg from "../../images/tuning.jpg";
+import brakesImg from "../../images/brakes.jpg";
+import suspensionImg from "../../images/suspension.jpg";
 
 // Data
 const servicesInfo = [
@@ -40,7 +40,7 @@ const servicesInfo = [
   },
 ];
 
-const ServicesSmall = () => (
+const Services = () => (
   <Section>
     <SectionHeading>Popular Services We Offer</SectionHeading>
     <CardsWrapper>
@@ -53,6 +53,8 @@ const ServicesSmall = () => (
     </StyledNavLink>
   </Section>
 );
+
+export default Services;
 
 const Section = styled.section``;
 
@@ -76,5 +78,3 @@ const StyledNavLink = styled(props => <Link {...props} />)`
   text-transform: uppercase;
   text-align: center;
 `;
-
-export default ServicesSmall;

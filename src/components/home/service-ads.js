@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import engineImg from "../images/engine1.jpg";
-import exhaustImg from "../images/exhaust.jpg";
-import rimImg from "../images/rim.jpg";
+import engineImg from "../../images/engine1.jpg";
+import exhaustImg from "../../images/exhaust.jpg";
+import rimImg from "../../images/rim.jpg";
 
 const ServiceAds = () => (
   <Section>
