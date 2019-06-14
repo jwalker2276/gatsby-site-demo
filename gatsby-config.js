@@ -1,8 +1,15 @@
 module.exports = {
   siteMetadata: {
-    title: `Business Website`,
-    description: `Description coming soon`,
-    author: `Jordan Walker`,
+    title: "DownShift",
+    description: "",
+    author: "Jordan Walker",
+    name: "DownShift",
+    phone: "1-888-331-4517",
+    email: "shop@downshift.com",
+    youtube: "https://www.youtube.com",
+    instagram: "https://www.instagram.com",
+    twitter: "https://www.twitter.com",
+    facebook: "https://www.facebook.com",
   },
   plugins: [
     {
