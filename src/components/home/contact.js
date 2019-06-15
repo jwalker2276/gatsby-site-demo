@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useStaticQuery, graphql } from "gatsby";
+import useContactForm from "../../customHooks/customFormHook";
 
 const Contact = () => {
   const data = useStaticQuery(graphql`
@@ -14,27 +15,65 @@ const Contact = () => {
     }
   `);
 
+  // Function to call when form is submitted
+  const sendContactForm = () => {
+    alert(
+      `User sent message!
+       Name: ${inputs.name} 
+       Email: ${inputs.email} 
+       Subject: ${inputs.subject} 
+       Message: ${inputs.message}`
+    );
+  };
+
+  // Custom Hook
+  const { inputs, handleInputChange, handleSubmit } = useContactForm(
+    sendContactForm
+  );
+
   return (
     <Section>
       <SectionLeft>
-        <Form>
-          <FormLabel>
+        <Form onSubmit={handleSubmit}>
+          <FormLabel for="name">
             Name
-            <FormInput />
+            <FormInput
+              type="text"
+              name="name"
+              onChange={handleInputChange}
+              required
+            />
           </FormLabel>
-          <FormLabel>
+          <FormLabel for="email">
             Email
-            <FormInput />
+            <FormInput
+              type="email"
+              name="email"
+              onChange={handleInputChange}
+              required
+            />
           </FormLabel>
-          <FormLabel>
+          <FormLabel for="subject">
             Subject
-            <FormInput />
+            <FormInput
+              type="text"
+              name="subject"
+              onChange={handleInputChange}
+              required
+            />
           </FormLabel>
-          <FormLabel>
+          <FormLabel for="message">
             Message
-            <FormInput />
+            <FormMessage
+              type="text"
+              name="message"
+              onChange={handleInputChange}
+              required
+            />
           </FormLabel>
-          <FormButton>Send</FormButton>
+          <FormButton type="submit" value="Submit">
+            Send
+          </FormButton>
         </Form>
       </SectionLeft>
       <SectionRight>
@@ -77,6 +116,11 @@ const FormLabel = styled.label`
 `;
 
 const FormInput = styled.input`
+  width: 100%;
+  box-sizing: border-box;
+`;
+
+const FormMessage = styled.textarea`
   width: 100%;
   box-sizing: border-box;
 `;
