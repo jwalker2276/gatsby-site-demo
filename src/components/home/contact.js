@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useStaticQuery, graphql } from "gatsby";
-import useContactForm from "../../customHooks/customFormHook";
+import ContactForm from "../common/contact-form";
 
 const Contact = () => {
   const data = useStaticQuery(graphql`
@@ -15,66 +15,10 @@ const Contact = () => {
     }
   `);
 
-  // Function to call when form is submitted
-  const sendContactForm = () => {
-    alert(
-      `User sent message!
-       Name: ${inputs.name} 
-       Email: ${inputs.email} 
-       Subject: ${inputs.subject} 
-       Message: ${inputs.message}`
-    );
-  };
-
-  // Custom Hook
-  const { inputs, handleInputChange, handleSubmit } = useContactForm(
-    sendContactForm
-  );
-
   return (
     <Section>
       <SectionLeft>
-        <Form onSubmit={handleSubmit}>
-          <FormLabel for="name">
-            Name
-            <FormInput
-              type="text"
-              name="name"
-              onChange={handleInputChange}
-              required
-            />
-          </FormLabel>
-          <FormLabel for="email">
-            Email
-            <FormInput
-              type="email"
-              name="email"
-              onChange={handleInputChange}
-              required
-            />
-          </FormLabel>
-          <FormLabel for="subject">
-            Subject
-            <FormInput
-              type="text"
-              name="subject"
-              onChange={handleInputChange}
-              required
-            />
-          </FormLabel>
-          <FormLabel for="message">
-            Message
-            <FormMessage
-              type="text"
-              name="message"
-              onChange={handleInputChange}
-              required
-            />
-          </FormLabel>
-          <FormButton type="submit" value="Submit">
-            Send
-          </FormButton>
-        </Form>
+        <ContactForm />
       </SectionLeft>
       <SectionRight>
         <SectionTitle>Contact Us</SectionTitle>
@@ -105,26 +49,3 @@ const ContactText = styled.h2`
 `;
 
 const SectionRight = styled.div``;
-
-const Form = styled.form`
-  display: grid;
-  grid-template: 1fr 1fr 1fr 1fr 2fr / 1fr;
-`;
-
-const FormLabel = styled.label`
-  width: 100%;
-`;
-
-const FormInput = styled.input`
-  width: 100%;
-  box-sizing: border-box;
-`;
-
-const FormMessage = styled.textarea`
-  width: 100%;
-  box-sizing: border-box;
-`;
-
-const FormButton = styled.button`
-  cursor: pointer;
-`;
