@@ -12,31 +12,30 @@ const servicesInfo = [
   {
     ImgSrc: engineImg,
     Alt: "Engine",
-    Heading: "Custom Engines",
+    Heading: "Engines",
     Text: "We build it to your needs.",
-    ButtonText: "Schedule Engine Work",
+    ButtonText: "Schedule",
   },
   {
     ImgSrc: tuningImg,
     Alt: "Tuning",
     Heading: "Tuning",
     Text: "We tune your vehice for maximun power.",
-    ButtonText: "Schedule Dyno Time",
+    ButtonText: "Schedule",
   },
   {
     ImgSrc: brakesImg,
     Alt: "Brakes",
-    Heading: "Custom Brakes",
+    Heading: "Brakes",
     Text: "Our experts install the brake you need to stop quickly.",
-    ButtonText: "Schedule New Brakes",
+    ButtonText: "Schedule",
   },
   {
     ImgSrc: suspensionImg,
     Alt: "Suspension",
-    Heading: "Custom Suspension",
-    Text:
-      "We can raise, lower, or firm up your suspension to keep the power under control.",
-    ButtonText: "Schedule New Suspension",
+    Heading: "Suspension",
+    Text: "We can raise, lower, firm up or soften your suspension.",
+    ButtonText: "Schedule",
   },
 ];
 
@@ -48,15 +47,17 @@ const Services = () => (
         <ServiceCard key={serviceData.Heading} data={serviceData} />
       ))}
     </CardsWrapper>
-    <StyledNavLink to="/services">
-      Click here for all of our services
-    </StyledNavLink>
+    <StyledNavLink to="/services">See all of our services</StyledNavLink>
   </Section>
 );
 
 export default Services;
 
-const Section = styled.section``;
+const Section = styled.section`
+  display: grid;
+  grid-template: auto auto auto / 1fr;
+  margin: 0 10px;
+`;
 
 const SectionHeading = styled.h1`
   font-size: 28px;
@@ -72,9 +73,13 @@ const CardsWrapper = styled.div`
 `;
 
 const StyledNavLink = styled(props => <Link {...props} />)`
-  font-size: 16px;
-  color: black;
+  justify-self: center;
+  color: white;
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
+  padding: 15px 15px;
+  margin: 15px 0;
+  background: black;
+  border-radius: 10px;
 `;

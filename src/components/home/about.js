@@ -8,7 +8,7 @@ const About = () => {
     query AboutQuery {
       file(relativePath: { regex: "/aboutpicturesmall/" }) {
         childImageSharp {
-          fluid(maxWidth: 400) {
+          fluid(maxWidth: 500) {
             ...GatsbyImageSharpFluid
           }
         }
@@ -41,13 +41,16 @@ export default About;
 
 const Section = styled.section`
   display: grid;
-  grid-template: 1fr / 3fr 2fr;
+  grid-template: 1fr / 1fr 1fr;
+  margin: 10px 10px;
+  padding: 20px 0;
 `;
 
 const SectionLeft = styled.div`
   display: grid;
-  grid-template: 1fr 1fr / 1fr;
+  grid-template: auto auto / 1fr;
   grid-column: 1 / 2;
+  padding: 10px;
 `;
 
 const SectionRight = styled.div`
@@ -56,7 +59,7 @@ const SectionRight = styled.div`
 
 const SectionTitle = styled.h1`
   font-size: 28px;
-  margin: 36px 0;
+  margin: 24px 0;
 `;
 
 const SectionParagraph = styled.p`
