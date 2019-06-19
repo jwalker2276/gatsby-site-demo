@@ -36,6 +36,7 @@ export default Contact;
 const Section = styled.section`
   display: grid;
   grid-template: 1fr / 3fr 2fr;
+  margin: 10px;
 `;
 
 const SectionLeft = styled.div``;

@@ -89,6 +89,7 @@ const ContactForm = () => {
           value={message}
           onChange={handleInputChange}
           required
+          rows="7"
         />
       </FormLabel>
       <FormButton type="submit" value="Submit">
@@ -102,7 +103,8 @@ export default ContactForm;
 
 const Form = styled.form`
   display: grid;
-  grid-template: 1fr 1fr 1fr 1fr 2fr / 1fr;
+  grid-template: 1fr 1fr 1fr auto auto / 1fr;
+  padding: 10px;
 `;
 
 const FormLabel = styled.label`
@@ -121,4 +123,6 @@ const FormMessage = styled.textarea`
 
 const FormButton = styled.button`
   cursor: pointer;
+  width: 150px;
+  height: 40px;
 `;
