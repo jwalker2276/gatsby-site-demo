@@ -39,7 +39,10 @@ const Section = styled.section`
   margin: 10px;
 `;
 
-const SectionLeft = styled.div``;
+const SectionLeft = styled.div`
+  background-color: black;
+  color: white;
+`;
 
 const SectionTitle = styled.h1`
   font-size: 36px;
@@ -49,4 +52,6 @@ const ContactText = styled.h2`
   font-size: 18px;
 `;
 
-const SectionRight = styled.div``;
+const SectionRight = styled.div`
+  background-color: red;
+`;

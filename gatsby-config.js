@@ -6,6 +6,7 @@ module.exports = {
     name: "DownShift",
     phone: "1-888-331-4517",
     email: "shop@downshift.com",
+    address: "P.O. Box 446",
     youtube: "https://www.youtube.com",
     instagram: "https://www.instagram.com",
     twitter: "https://www.twitter.com",
