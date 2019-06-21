@@ -60,7 +60,7 @@ const Section = styled.section`
 `;
 
 const SectionHeading = styled.h1`
-  font-size: 28px;
+  font-size: 30px;
   text-align: center;
   margin: 36px;
 `;
@@ -82,4 +82,5 @@ const StyledNavLink = styled(props => <Link {...props} />)`
   margin: 15px 0;
   background: black;
   border-radius: 10px;
+  font-size: 18px;
 `;

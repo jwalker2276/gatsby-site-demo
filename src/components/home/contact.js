@@ -45,7 +45,7 @@ const SectionLeft = styled.div`
 `;
 
 const SectionTitle = styled.h1`
-  font-size: 36px;
+  font-size: 30px;
 `;
 
 const ContactText = styled.h2`

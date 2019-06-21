@@ -32,7 +32,7 @@ const Section = styled.section`
 `;
 
 const SectionTitle = styled.h1`
-  font-size: 28px;
+  font-size: 30px;
   text-align: center;
   margin: 36px;
 `;
@@ -55,7 +55,7 @@ const AdLarge = styled.div`
 
 const AdLargeText = styled.h2`
   color: white;
-  font-size: 28px;
+  font-size: 24px;
   margin: 10px;
   text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.85);
 `;

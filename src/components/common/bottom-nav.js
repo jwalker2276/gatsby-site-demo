@@ -119,7 +119,7 @@ const SocialInfo = styled.div`
 `;
 
 const SiteTitle = styled.h1`
-  font-size: 20px;
+  font-size: 24px;
 `;
 
 const ListTitle = styled.h2`
@@ -140,6 +140,7 @@ const IconList = styled.ul`
 
 const ListItem = styled.li`
   margin: 5px 0;
+  font-size: 16px;
 `;
 
 const Text = styled.p`

@@ -48,7 +48,7 @@ const NavListItem = styled.li`
 `;
 
 const StyledNavLink = styled(props => <Link {...props} />)`
-  font-size: 20px;
+  font-size: 18px;
   color: white;
   text-decoration: none;
   text-transform: uppercase;

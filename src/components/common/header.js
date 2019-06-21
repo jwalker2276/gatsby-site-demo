@@ -69,7 +69,7 @@ export default Header;
 // Styles
 const HeaderWrapper = styled.header`
   display: grid;
-  grid-template-rows: 100px 80px;
+  grid-template-rows: 96px 64px;
   align-items: center;
 `;
 
@@ -92,7 +92,7 @@ const HeaderLeft = styled.div`
 const StyledLink = styled(props => <Link {...props} />)`
   text-decoration: none;
   color: red;
-  font-size: 42px;
+  font-size: 48px;
   font-style: italic;
   text-transform: uppercase;
 `;
@@ -111,14 +111,14 @@ const CallInfoWrapper = styled.div`
 `;
 
 const CallInfoTop = styled.p`
-  font-size: 14px;
+  font-size: 12px;
   text-transform: uppercase;
   margin: 0;
   color: white;
 `;
 
 const CallInfoBottom = styled.p`
-  font-size: 24px;
+  font-size: 20px;
   margin: 0;
   color: white;
 `;

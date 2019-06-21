@@ -58,7 +58,7 @@ const SectionRight = styled.div`
 `;
 
 const SectionTitle = styled.h1`
-  font-size: 28px;
+  font-size: 30px;
   margin: 24px 0;
 `;
 

@@ -14,5 +14,5 @@ const IconLink = styled.a`
 `;
 
 const IconImage = styled.img`
-  width: 40px;
+  width: 32px;
 `;

@@ -105,6 +105,8 @@ const Form = styled.form`
   display: grid;
   grid-template: 1fr 1fr 1fr auto auto / 1fr;
   padding: 10px;
+  font-size: 18px;
+  grid-gap: 24px;
 `;
 
 const FormLabel = styled.label`

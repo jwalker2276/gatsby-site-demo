@@ -26,6 +26,7 @@ const Section = styled.footer`
 
 const FooterText = styled.p`
   text-align: center;
+  font-size: 14px;
 `;
 
 const ExternalLink = styled.a`
