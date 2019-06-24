@@ -104,27 +104,32 @@ export default ContactForm;
 const Form = styled.form`
   display: grid;
   grid-template: 1fr 1fr 1fr auto auto / 1fr;
-  padding: 10px;
   font-size: 18px;
-  grid-gap: 24px;
 `;
 
 const FormLabel = styled.label`
   width: 100%;
+  padding: 12px 0;
 `;
 
 const FormInput = styled.input`
   width: 100%;
   box-sizing: border-box;
+  margin-top: 12px;
+  padding: 8px;
 `;
 
 const FormMessage = styled.textarea`
   width: 100%;
   box-sizing: border-box;
+  padding: 8px;
+  margin-top: 12px;
 `;
 
 const FormButton = styled.button`
   cursor: pointer;
-  width: 150px;
-  height: 40px;
+  width: 128px;
+  height: 48px;
+  margin: 12px 0 0 0;
+  font-size: 18px;
 `;

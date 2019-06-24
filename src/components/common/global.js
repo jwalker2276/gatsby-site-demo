@@ -4,7 +4,8 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0px;
     padding: 0px;
-    font-family: 'Fira Sans Condensed', sans-serif;
+    height: 100%;
+    box-sizing: border-box;
   }
 `;
 

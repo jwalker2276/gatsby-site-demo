@@ -6,35 +6,43 @@ import engineImg from "../../images/engine2.jpg";
 import tuningImg from "../../images/tuning.jpg";
 import brakesImg from "../../images/brakes.jpg";
 import suspensionImg from "../../images/suspension.jpg";
+import iconEngine from "../../images/icon-engine.svg";
+import iconCar from "../../images/icon-car.svg";
+import iconChassis from "../../images/icon-chassis.svg";
+import iconWheel from "../../images/icon-wheel.svg";
 
 // Data
 const servicesInfo = [
   {
     ImgSrc: engineImg,
+    Icon: iconEngine,
     Alt: "Engine",
     Heading: "Engines",
-    Text: "We build it to your needs.",
+    Text: "Custom build engines",
     ButtonText: "Schedule",
   },
   {
     ImgSrc: tuningImg,
+    Icon: iconCar,
     Alt: "Tuning",
     Heading: "Tuning",
-    Text: "We tune your vehice for maximun power.",
+    Text: "Tune for maximun power",
     ButtonText: "Schedule",
   },
   {
     ImgSrc: brakesImg,
+    Icon: iconWheel,
     Alt: "Brakes",
     Heading: "Brakes",
-    Text: "Our experts install the brake you need to stop quickly.",
+    Text: "Stop quicker",
     ButtonText: "Schedule",
   },
   {
     ImgSrc: suspensionImg,
+    Icon: iconChassis,
     Alt: "Suspension",
     Heading: "Suspension",
-    Text: "We can raise, lower, firm up or soften your suspension.",
+    Text: "Raise, lower, firm up or soften",
     ButtonText: "Schedule",
   },
 ];
@@ -56,20 +64,22 @@ export default Services;
 const Section = styled.section`
   display: grid;
   grid-template: auto auto auto / 1fr;
-  margin: 0 10px;
+  background-color: gray;
 `;
 
 const SectionHeading = styled.h1`
-  font-size: 30px;
+  font-size: 36px;
   text-align: center;
   margin: 36px;
+  text-transform: uppercase;
 `;
 
 const CardsWrapper = styled.div`
   display: grid;
   grid-template: 1fr / repeat(4, 1fr);
-  grid-gap: 10px;
+  grid-gap: 16px;
   justify-items: center;
+  padding: 0 16px;
 `;
 
 const StyledNavLink = styled(props => <Link {...props} />)`
@@ -78,8 +88,8 @@ const StyledNavLink = styled(props => <Link {...props} />)`
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
-  padding: 15px 15px;
-  margin: 15px 0;
+  padding: 16px 16px;
+  margin: 48px 0 48px 0;
   background: black;
   border-radius: 10px;
   font-size: 18px;

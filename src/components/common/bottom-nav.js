@@ -98,8 +98,7 @@ export default BottomNav;
 const Section = styled.section`
   display: grid;
   grid-template: 1fr / repeat(4, 1fr);
-  margin: 10px;
-  padding: 10px;
+  background-color: gray;
 `;
 
 const GeneralInfo = styled.div`

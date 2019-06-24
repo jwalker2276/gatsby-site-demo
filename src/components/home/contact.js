@@ -36,16 +36,16 @@ export default Contact;
 const Section = styled.section`
   display: grid;
   grid-template: 1fr / 3fr 2fr;
-  margin: 10px;
 `;
 
 const SectionLeft = styled.div`
   background-color: black;
   color: white;
+  padding: 16px 16px;
 `;
 
 const SectionTitle = styled.h1`
-  font-size: 30px;
+  font-size: 32px;
 `;
 
 const ContactText = styled.h2`

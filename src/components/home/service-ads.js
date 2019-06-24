@@ -29,19 +29,24 @@ export default ServiceAds;
 
 const Section = styled.section`
   box-sizing: content-box;
+  background: red;
+  padding-bottom: 96px;
+  display: grid;
 `;
 
 const SectionTitle = styled.h1`
-  font-size: 30px;
+  font-size: 36px;
   text-align: center;
   margin: 36px;
+  text-transform: uppercase;
 `;
 
 const AdsWrapper = styled.div`
   display: grid;
   grid-template: 1fr 1fr / 3fr 2fr;
   height: 450px;
-  grid-gap: 15px;
+  grid-gap: 16px;
+  padding: 0 16px;
 `;
 
 const AdLarge = styled.div`

@@ -22,11 +22,16 @@ export default Footer;
 const Section = styled.footer`
   background: black;
   color: white;
+  display: grid;
+  grid-template-rows: auto auto;
 `;
 
 const FooterText = styled.p`
   text-align: center;
   font-size: 14px;
+  margin-bottom: 0;
+  padding: 7px 0;
+  width: 100%;
 `;
 
 const ExternalLink = styled.a`

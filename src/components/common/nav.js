@@ -44,7 +44,8 @@ const NavList = styled.ul`
 `;
 
 const NavListItem = styled.li`
-  padding-right: 30px;
+  padding-right: 48px;
+  margin-bottom: 0px;
 `;
 
 const StyledNavLink = styled(props => <Link {...props} />)`

@@ -77,7 +77,7 @@ const HeaderTop = styled.div`
   grid-column: 1 / -1;
   grid-row: 1 / 2;
   display: grid;
-  grid-template-columns: 1fr 40%;
+  grid-template-columns: 1fr auto;
   align-items: center;
   background-color: black;
   height: 100%;
@@ -108,6 +108,7 @@ const CallInfoWrapper = styled.div`
   display: grid;
   justify-items: left;
   align-items: center;
+  padding-right: 16px;
 `;
 
 const CallInfoTop = styled.p`
@@ -128,7 +129,7 @@ const SocialIconsWrapper = styled.div`
   grid-template-columns: repeat(4, 1fr);
   justify-items: center;
   align-items: center;
-  grid-gap: 10px;
+  grid-gap: 16px;
 `;
 
 // Props Types
