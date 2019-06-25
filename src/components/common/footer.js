@@ -24,14 +24,14 @@ const Section = styled.footer`
   color: white;
   display: grid;
   grid-template-rows: auto auto;
+  padding: 16px;
 `;
 
 const FooterText = styled.p`
   text-align: center;
-  font-size: 14px;
+  font-size: 16px;
   margin-bottom: 0;
-  padding: 7px 0;
-  width: 100%;
+  padding: 4px 0;
 `;
 
 const ExternalLink = styled.a`

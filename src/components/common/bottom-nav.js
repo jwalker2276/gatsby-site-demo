@@ -6,6 +6,9 @@ import facebookIcon from "../../images/icon-facebook.svg";
 import twitterIcon from "../../images/icon-twitter.svg";
 import instagramIcon from "../../images/icon-insta.svg";
 import youtubeIcon from "../../images/icon-youtube.svg";
+import mailIcon from "../../images/icon-mail.svg";
+import phoneIcon from "../../images/icon-phone-ring.svg";
+import addressIcon from "../../images/icon-location-pin.svg";
 
 const BottomNav = () => {
   const data = useStaticQuery(graphql`
@@ -43,9 +46,18 @@ const BottomNav = () => {
       <ContactInfo>
         <ListTitle>Contact</ListTitle>
         <List>
-          <ListItem>{email}</ListItem>
-          <ListItem>{phone}</ListItem>
-          <ListItem>{address}</ListItem>
+          <ListItem>
+            <ListItemIcon src={mailIcon} alt="email icon" />
+            {email}
+          </ListItem>
+          <ListItem>
+            <ListItemIcon src={phoneIcon} alt="phone icon" />
+            {phone}
+          </ListItem>
+          <ListItem>
+            <ListItemIcon src={addressIcon} alt="address icon" />
+            {address}
+          </ListItem>
         </List>
       </ContactInfo>
       <SiteInfo>
@@ -99,6 +111,7 @@ const Section = styled.section`
   display: grid;
   grid-template: 1fr / repeat(4, 1fr);
   background-color: gray;
+  padding: 48px 16px;
 `;
 
 const GeneralInfo = styled.div`
@@ -118,16 +131,20 @@ const SocialInfo = styled.div`
 `;
 
 const SiteTitle = styled.h1`
-  font-size: 24px;
+  font-size: 30px;
+  margin-top: 0;
 `;
 
 const ListTitle = styled.h2`
-  font-size: 18px;
+  font-size: 24px;
+  margin-bottom: 16px;
 `;
 
 const List = styled.ul`
   list-style: none;
   padding: 0px;
+  margin-left: 0;
+  margin-bottom: 0;
 `;
 
 const IconList = styled.ul`
@@ -135,10 +152,16 @@ const IconList = styled.ul`
   padding: 0px;
   display: grid;
   grid-template: 1fr / repeat(4, 1fr);
+  margin-left: 0;
+`;
+
+const ListItemIcon = styled.img`
+  width: 16px;
+  margin-right: 16px;
 `;
 
 const ListItem = styled.li`
-  margin: 5px 0;
+  margin: 12px 0;
   font-size: 16px;
 `;
 
@@ -149,6 +172,5 @@ const Text = styled.p`
 const StyledNavLink = styled(props => <Link {...props} />)`
   font-size: 16px;
   color: black;
-  text-decoration: none;
-  text-transform: uppercase;
+  text-decoration: underline;
 `;

@@ -69,5 +69,5 @@ const SectionParagraph = styled.p`
   font-size: 18px;
   width: 35em;
   line-height: 1.5;
-  margin-bottom: 16px;
+  margin-bottom: 32px;
 `;
