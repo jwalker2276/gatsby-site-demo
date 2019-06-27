@@ -5,6 +5,7 @@ import ContactForm from "../common/contact-form";
 import IconMail from "../../images/icon-mail.svg";
 import IconPhone from "../../images/icon-phone-ring.svg";
 import IconAddress from "../../images/icon-location-pin.svg";
+import motorImg from "../../images/motor.jpg";
 
 const Contact = () => {
   const data = useStaticQuery(graphql`
@@ -65,6 +66,10 @@ const SectionLeft = styled.div`
   background-color: black;
   color: white;
   padding: 16px;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+    url(${motorImg});
+  background-size: cover;
+  background-repeat: no-repeat;
 `;
 
 const SectionRight = styled.div`

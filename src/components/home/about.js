@@ -46,13 +46,13 @@ export default About;
 const Section = styled.section`
   display: grid;
   grid-template: 1fr / 1fr 1fr;
+  padding: 32px 16px;
 `;
 
 const SectionLeft = styled.div`
   display: grid;
   grid-template: auto auto / 1fr;
   grid-column: 1 / 2;
-  padding: 16px;
 `;
 
 const SectionRight = styled.div`
