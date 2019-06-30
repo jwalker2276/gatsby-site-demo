@@ -6,6 +6,7 @@ import IconMail from "../../images/icon-mail.svg";
 import IconPhone from "../../images/icon-phone-ring.svg";
 import IconAddress from "../../images/icon-location-pin.svg";
 import motorImg from "../../images/motor.jpg";
+import IconPedals from "../../images/icon-pedals.svg";
 
 const Contact = () => {
   const data = useStaticQuery(graphql`
@@ -28,6 +29,7 @@ const Contact = () => {
         <ContactForm />
       </SectionLeft>
       <SectionRight>
+        <SectionRightBackground />
         <SectionTitle>Contact Us</SectionTitle>
         <ContactInfo>
           <ContactLabel>Email:</ContactLabel>
@@ -73,11 +75,28 @@ const SectionLeft = styled.div`
 `;
 
 const SectionRight = styled.div`
-  background-color: red;
   padding: 16px;
+  background-color: red;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+  color: white;
+  position: relative;
 `;
 
-const ContactInfo = styled.div``;
+const SectionRightBackground = styled.div`
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  height: 50%;
+  background-image: url(${IconPedals});
+  background-size: cover;
+  z-index: 1;
+  opacity: 0.25;
+`;
+
+const ContactInfo = styled.div`
+  z-index: 5;
+`;
 
 const SectionTitle = styled.h1`
   font-size: 48px;

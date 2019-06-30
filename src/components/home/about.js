@@ -8,9 +8,14 @@ const About = () => {
     query AboutQuery {
       file(relativePath: { regex: "/aboutpicturesmall/" }) {
         childImageSharp {
-          fluid(maxWidth: 500) {
+          fluid(maxWidth: 700) {
             ...GatsbyImageSharpFluid
           }
+        }
+      }
+      site {
+        siteMetadata {
+          bio
         }
       }
     }
@@ -20,19 +25,7 @@ const About = () => {
     <Section>
       <SectionLeft>
         <SectionTitle>About DownShift</SectionTitle>
-        <SectionParagraph>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          eget semper magna. Lorem ipsum dolor sit amet, consectetur adipiscing
-          elit. Nulla nec bibendum est. Fusce posuere, risus et tempor mollis,
-          mi dui mollis nisi, in aliquet nibh nunc eget orci. Morbi commodo
-          placerat scelerisque. Aenean rhoncus, nulla id aliquam condimentum,
-          magna arcu tincidunt purus, id mattis orci neque at elit. Vestibulum
-          sed aliquam dui. Quisque hendrerit eu orci sed ornare. in aliquet nibh
-          nunc eget orci. Morbi commodo placerat scelerisque. Aenean rhoncus,
-          nulla id aliquam condimentum, magna arcu tincidunt purus, id mattis
-          orci neque at elit. Vestibulum sed aliquam dui. Quisque hendrerit eu
-          orci sed ornare.
-        </SectionParagraph>
+        <SectionParagraph>{data.site.siteMetadata.bio}</SectionParagraph>
       </SectionLeft>
       <SectionRight>
         <Img fluid={data.file.childImageSharp.fluid} />
@@ -47,6 +40,8 @@ const Section = styled.section`
   display: grid;
   grid-template: 1fr / 1fr 1fr;
   padding: 32px 16px;
+  background-color: white;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 `;
 
 const SectionLeft = styled.div`

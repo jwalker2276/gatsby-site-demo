@@ -11,6 +11,8 @@ module.exports = {
     instagram: "https://www.instagram.com",
     twitter: "https://www.twitter.com",
     facebook: "https://www.facebook.com",
+    bio:
+      "Downshift is an automotive engineering company founded in Texas by Daniel Smith in 2013. We create the highest quality products for the automotive aftermarket tuning industry. Our products and services are professionally installed, thoroughly tested and backed by a 20-year free replacement warranty. We are a one-stop shop with over 50 years of combined knowledge with the best technicians and engineers around. Whether you want to stop fast, ride in style or run under 10 seconds on the track, no one beats our products and service.",
   },
   plugins: [
     {
