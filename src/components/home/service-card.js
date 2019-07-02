@@ -29,7 +29,7 @@ const CardInner = styled.div`
   display: grid;
   align-items: center;
   justify-items: center;
-  background-color: white;
+  background-color: var(--neut-lightest);
   grid-template: repeat(4, auto) / 310px;
   box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.25);
   transform: translateY(-5px);
@@ -46,23 +46,25 @@ const CardTitle = styled.h2`
   font-size: 32px;
   text-align: center;
   margin: 0;
+  color: var(--heading-dark);
 `;
 
 const CardDesc = styled.p`
   font-size: 18px;
   text-align: center;
   margin: 32px 0;
+  color: var(--body-dark);
 `;
 
 const StyledNavLink = styled(props => <Link {...props} />)`
   align-self: center;
   font-size: 18px;
-  color: white;
+  color: var(--body-light);
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
   padding: 16px 0px;
-  background: black;
+  background: var(--red-dark);
   border-radius: 10px;
   width: 200px;
   margin-bottom: 32px;

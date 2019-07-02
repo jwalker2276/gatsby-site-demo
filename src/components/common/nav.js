@@ -40,7 +40,7 @@ const NavWrapper = styled.nav`
   grid-row: 2 / -1;
   grid-column: 1 / -1;
   height: 100%;
-  background-color: red;
+  background-color: var(--red-base);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 `;
 
@@ -51,30 +51,30 @@ const NavList = styled.ul`
   height: 100%;
   align-items: center;
   margin: 0px 16px;
-  border-left: 1px solid black;
+  border-left: 1px solid var(--red-darkest);
   box-sizing: border-box;
 `;
 
 const NavListItem = styled.li`
   height: 100%;
   display: flex;
-  border-right: 1px solid black;
+  border-right: 1px solid var(--red-darkest);
   margin: 0;
 `;
 
 const StyledNavLink = styled(props => <Link {...props} />)`
   font-size: 18px;
   width: 100%;
-  color: white;
+  color: var(--neut-lightest);
   text-decoration: none;
   text-transform: uppercase;
   display: flex;
   align-items: center;
   padding: 0 24px;
-  border-bottom: 2px solid red;
+  border-bottom: 4px solid var(--red-base);
 `;
 
-// This object is passed a props to the link component when page matches nav.
+// This object is passed as props to the link component when page matches nav.
 const activeStyles = {
-  borderBottom: "4px solid white",
+  borderBottom: "4px solid var(--red-lightest)",
 };

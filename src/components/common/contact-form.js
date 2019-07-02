@@ -105,6 +105,7 @@ const Form = styled.form`
   display: grid;
   grid-template: 1fr 1fr 1fr auto auto / 1fr;
   font-size: 18px;
+  color: var(--body-light);
 `;
 
 const FormLabel = styled.label`
@@ -132,4 +133,7 @@ const FormButton = styled.button`
   height: 48px;
   margin: 12px 0 0 0;
   font-size: 18px;
+  color: var(--body-light);
+  background: var(--red-base);
+  border: none;
 `;

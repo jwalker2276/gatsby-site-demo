@@ -71,6 +71,8 @@ const HeaderWrapper = styled.header`
   display: grid;
   grid-template-rows: 96px 64px;
   align-items: center;
+  color: var(--neut-lightest);
+  background-color: var(--neut-darkest);
 `;
 
 const HeaderTop = styled.div`
@@ -79,7 +81,6 @@ const HeaderTop = styled.div`
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
-  background-color: black;
   height: 100%;
 `;
 
@@ -91,7 +92,7 @@ const HeaderLeft = styled.div`
 // Logo
 const StyledLink = styled(props => <Link {...props} />)`
   text-decoration: none;
-  color: red;
+  color: var(--red-base);
   font-size: 48px;
   font-style: italic;
   text-transform: uppercase;
@@ -115,13 +116,12 @@ const CallInfoTop = styled.p`
   font-size: 12px;
   text-transform: uppercase;
   margin: 0;
-  color: white;
+  opacity: 0.75;
 `;
 
 const CallInfoBottom = styled.p`
   font-size: 20px;
   margin: 0;
-  color: white;
 `;
 
 const SocialIconsWrapper = styled.div`
@@ -131,12 +131,3 @@ const SocialIconsWrapper = styled.div`
   align-items: center;
   grid-gap: 16px;
 `;
-
-// Props Types
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-};
-
-Header.defaultProps = {
-  siteTitle: ``,
-};

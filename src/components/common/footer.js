@@ -20,8 +20,8 @@ const Footer = () => (
 export default Footer;
 
 const Section = styled.footer`
-  background: black;
-  color: white;
+  background: var(--neut-darkest);
+  color: var(--body-light);
   display: grid;
   grid-template-rows: auto auto;
   padding: 16px;
@@ -35,6 +35,6 @@ const FooterText = styled.p`
 `;
 
 const ExternalLink = styled.a`
-  color: red;
+  color: var(--red-base);
   text-decoration: none;
 `;

@@ -36,10 +36,9 @@ export default ServiceAds;
 
 const Section = styled.section`
   box-sizing: content-box;
-  background: red;
+  background: var(--red-base);
   padding-bottom: 96px;
   display: grid;
-  background-color: red;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 `;
 
@@ -48,6 +47,7 @@ const SectionTitle = styled.h1`
   text-align: center;
   margin: 36px;
   text-transform: uppercase;
+  color: var(--heading-dark);
 `;
 
 const AdsWrapper = styled.div`
@@ -59,11 +59,11 @@ const AdsWrapper = styled.div`
 `;
 
 const BasicAd = styled.div`
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url(${props => props.image});
   background-size: cover;
   background-repeat: no-repeat;
-  border: 2px solid white;
+  border: 2px solid var(--red-light);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -77,16 +77,17 @@ const AdLarge = styled(BasicAd)`
 `;
 
 const AdText = styled.h2`
-  color: white;
-  font-size: 36px;
+  color: var(--body-light);
+  font-size: 48px;
   margin: 12px;
   text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.85);
 `;
 
 const AdTextSmall = styled.p`
-  color: white;
+  color: var(--body-light);
   font-size: 18px;
   margin: 0px;
+  opacity: 0.9;
 `;
 
 const AdSmallOne = styled(BasicAd)`

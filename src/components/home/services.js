@@ -64,8 +64,8 @@ export default Services;
 const Section = styled.section`
   display: grid;
   grid-template: auto auto auto / 1fr;
-  background-color: gray;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+  background-color: var(--neut-lightest);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.15' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 `;
 
 const SectionHeading = styled.h1`
@@ -73,6 +73,7 @@ const SectionHeading = styled.h1`
   text-align: center;
   margin: 36px;
   text-transform: uppercase;
+  color: var(--heading-dark);
 `;
 
 const CardsWrapper = styled.div`
@@ -85,13 +86,13 @@ const CardsWrapper = styled.div`
 
 const StyledNavLink = styled(props => <Link {...props} />)`
   justify-self: center;
-  color: white;
+  color: var(--body-light);
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
   padding: 16px 16px;
   margin: 48px 0 48px 0;
-  background: black;
+  background: var(--red-darkest);
   border-radius: 10px;
   font-size: 18px;
 `;
