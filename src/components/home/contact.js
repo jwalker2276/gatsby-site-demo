@@ -2,11 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { useStaticQuery, graphql } from "gatsby";
 import ContactForm from "../common/contact-form";
-import IconMail from "../../images/icon-mail.svg";
-import IconPhone from "../../images/icon-phone-ring.svg";
-import IconAddress from "../../images/icon-location-pin.svg";
 import motorImg from "../../images/motor.jpg";
 import IconPedals from "../../images/icon-pedals.svg";
+import { EmailIcon, PhoneIcon, LocationIcon } from "../common/icons";
 
 const Contact = () => {
   const data = useStaticQuery(graphql`
@@ -34,21 +32,21 @@ const Contact = () => {
         <ContactInfo>
           <ContactLabel>Email:</ContactLabel>
           <ContactText>
-            <Icon src={IconMail} alt="Email" />
+            <EmailIcon width="20px" color="hsl(4,27%,98%)" />
             {email}
           </ContactText>
         </ContactInfo>
         <ContactInfo>
           <ContactLabel>Phone:</ContactLabel>
           <ContactText>
-            <Icon src={IconPhone} alt="Email" />
+            <PhoneIcon width="20px" color="hsl(4,27%,98%)" />
             {phone}
           </ContactText>
         </ContactInfo>
         <ContactInfo>
           <ContactLabel>Address:</ContactLabel>
           <ContactText>
-            <Icon src={IconAddress} alt="Email" />
+            <LocationIcon width="20px" color="hsl(4,27%,98%)" />
             {address}
           </ContactText>
         </ContactInfo>

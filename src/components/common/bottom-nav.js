@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Link, graphql, useStaticQuery } from "gatsby";
 import Icon from "./social-icon";
+import { EmailIcon, PhoneIcon, LocationIcon } from './icons';
 import facebookIcon from "../../images/icon-facebook.svg";
 import twitterIcon from "../../images/icon-twitter.svg";
 import instagramIcon from "../../images/icon-insta.svg";
@@ -47,15 +48,15 @@ const BottomNav = () => {
         <ListTitle>Contact</ListTitle>
         <List>
           <ListItem>
-            <ListItemIcon src={mailIcon} alt="email icon" />
+            <EmailIcon width="15px" color="hsl(4,77%,48%)" />
             {email}
           </ListItem>
           <ListItem>
-            <ListItemIcon src={phoneIcon} alt="phone icon" />
+            <PhoneIcon width="15px" color="hsl(4,77%,48%)" />
             {phone}
           </ListItem>
           <ListItem>
-            <ListItemIcon src={addressIcon} alt="address icon" />
+            <LocationIcon width="15px" color="hsl(4,77%,48%)" />
             {address}
           </ListItem>
         </List>
@@ -176,6 +177,6 @@ const Text = styled.p`
 
 const StyledNavLink = styled(props => <Link {...props} />)`
   font-size: 16px;
-  color: var(--body-light);
+  color: var(--red-base);
   text-decoration: underline;
 `;
