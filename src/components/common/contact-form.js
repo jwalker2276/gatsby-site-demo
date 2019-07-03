@@ -118,6 +118,8 @@ const FormInput = styled.input`
   box-sizing: border-box;
   margin-top: 12px;
   padding: 8px;
+  background-color: var(--neut-lightest);
+  border: none;
 `;
 
 const FormMessage = styled.textarea`
@@ -125,6 +127,8 @@ const FormMessage = styled.textarea`
   box-sizing: border-box;
   padding: 8px;
   margin-top: 12px;
+  background-color: var(--neut-lightest);
+  border: none;
 `;
 
 const FormButton = styled.button`
@@ -133,7 +137,7 @@ const FormButton = styled.button`
   height: 48px;
   margin: 12px 0 0 0;
   font-size: 18px;
-  color: var(--body-light);
+  color: var(--body-light-t);
   background: var(--red-base);
   border: none;
 `;

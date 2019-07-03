@@ -43,9 +43,9 @@ const Section = styled.section`
 `;
 
 const SectionTitle = styled.h1`
-  font-size: 36px;
+  font-size: 48px;
   text-align: center;
-  margin: 36px;
+  margin: 64px;
   text-transform: uppercase;
   color: var(--heading-dark);
 `;

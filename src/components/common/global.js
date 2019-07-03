@@ -9,15 +9,17 @@ const GlobalStyle = createGlobalStyle`
     --red-dark: hsla(4,84%,35%,1);
     --red-darkest: hsla(4,81%,11%,1);
     // Neutrals
-    --neut-lightest: hsla(4,40%,96%,1);
-    --neut-light: hsla(4,26%,81%,1);
-    --neut-base: hsla(4,13%,48%,1);
-    --neut-dark: hsla(4,26%,23%,1);
-    --neut-darkest: hsla(4,35%,13%,1);
+    --neut-lightest: hsla(4,27%,98%,1);
+    --neut-lighter: hsla(4,8%, 94%,1);
+    --neut-light: hsla(4,4%,82%,1);
+    --neut-base: hsla(4,2%,48%,1);
+    --neut-dark: hsla(4,2%,32%,1);
+    --neut-darkest: hsla(4,11%,11%,1);
     // Text
     --heading-dark: var(--neut-darkest);
     --body-dark: var(--neut-darkest);
     --body-light: var(--neut-lightest);
+    --body-light-t: hsla(4,27%,98%,.90);
   }
 
   body {

@@ -55,7 +55,6 @@ const Services = () => (
         <ServiceCard key={serviceData.Heading} data={serviceData} />
       ))}
     </CardsWrapper>
-    <StyledNavLink to="/services">See all of our services</StyledNavLink>
   </Section>
 );
 
@@ -63,15 +62,15 @@ export default Services;
 
 const Section = styled.section`
   display: grid;
-  grid-template: auto auto auto / 1fr;
+  grid-template: auto auto / 1fr;
   background-color: var(--neut-lightest);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.15' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 `;
 
 const SectionHeading = styled.h1`
-  font-size: 36px;
+  font-size: 48px;
   text-align: center;
-  margin: 36px;
+  margin: 64px;
   text-transform: uppercase;
   color: var(--heading-dark);
 `;
@@ -82,17 +81,5 @@ const CardsWrapper = styled.div`
   grid-gap: 16px;
   justify-items: center;
   padding: 0 16px;
-`;
-
-const StyledNavLink = styled(props => <Link {...props} />)`
-  justify-self: center;
-  color: var(--body-light);
-  text-decoration: none;
-  text-transform: uppercase;
-  text-align: center;
-  padding: 16px 16px;
-  margin: 48px 0 48px 0;
-  background: var(--red-darkest);
-  border-radius: 10px;
-  font-size: 18px;
+  margin-bottom: 64px;
 `;

@@ -39,8 +39,8 @@ export default About;
 const Section = styled.section`
   display: grid;
   grid-template: 1fr / 1fr 1fr;
-  padding: 32px 16px;
-  background-color: var(--neut-base);
+  padding: 64px 16px;
+  background-color: var(--neut-lighter);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.15' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 `;
 
@@ -55,7 +55,7 @@ const SectionRight = styled.div`
 `;
 
 const SectionTitle = styled.h1`
-  font-size: 36px;
+  font-size: 48px;
   margin: 16px 0 32px 0;
   text-transform: uppercase;
   color: var(--heading-dark);
