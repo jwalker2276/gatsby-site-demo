@@ -10,16 +10,19 @@ const ServiceAds = () => (
     <SectionTitle>Offers For You</SectionTitle>
     <AdsWrapper>
       <AdLarge image={engineImg}>
+        <Accent />
         <TagIcon />
         <AdText>Get Up to $100 in Savings</AdText>
         <AdTextSmall>When you purchase your first tuning service.</AdTextSmall>
       </AdLarge>
       <AdSmallOne image={exhaustImg}>
+        <Accent />
         <TagIcon />
         <AdText>Get Up to $50 in Savings</AdText>
         <AdTextSmall>When you purchase a new exhaust systems.</AdTextSmall>
       </AdSmallOne>
       <AdSmallTwo image={rimImg}>
+        <Accent />
         <TagIcon />
         <AdText>Get Up to $100 in Savings</AdText>
         <AdTextSmall>
@@ -36,10 +39,10 @@ export default ServiceAds;
 
 const Section = styled.section`
   box-sizing: content-box;
-  background: var(--red-base);
+  background: var(--neut-lighter);
   padding-bottom: 96px;
   display: grid;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.15' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 `;
 
 const SectionTitle = styled.h1`
@@ -63,12 +66,13 @@ const BasicAd = styled.div`
     url(${props => props.image});
   background-size: cover;
   background-repeat: no-repeat;
-  border: 2px solid var(--red-light);
+  border-bottom: 5px solid var(--red-dark);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
+  overflow: hidden;
 `;
 
 const AdLarge = styled(BasicAd)`
@@ -78,9 +82,9 @@ const AdLarge = styled(BasicAd)`
 
 const AdText = styled.h2`
   color: var(--body-light);
-  font-size: 48px;
+  font-size: 36px;
   margin: 12px;
-  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.85);
+  text-shadow: 0px 0px 20px var(--neut-darkest);
 `;
 
 const AdTextSmall = styled.p`
@@ -100,12 +104,23 @@ const AdSmallTwo = styled(BasicAd)`
   grid-row: 2 / -1;
 `;
 
+const Accent = styled.div`
+  background: var(--red-base);
+  position: absolute;
+  top: -80px;
+  right: -90px;
+  height: 150px;
+  width: 150px;
+  transform: rotate(45deg);
+`;
+
 const TagIcon = styled.div`
   position: absolute;
-  top: -15px;
-  left: -15px;
-  width: 70px;
-  height: 70px;
+  top: 10px;
+  right: 0px;
+  width: 40px;
+  height: 40px;
   z-index: 10;
   background: url(${tagImg}) no-repeat;
+  opacity: 0.95;
 `;

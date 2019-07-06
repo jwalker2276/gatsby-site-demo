@@ -7,12 +7,12 @@ import Footer from "./footer";
 import "./layout.css";
 
 const Layout = ({ children }) => (
-  <>
+  <main>
     <Header />
     {children}
     <BottomNav />
     <Footer />
-  </>
+  </main>
 );
 
 export default Layout;

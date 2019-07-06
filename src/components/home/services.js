@@ -7,8 +7,8 @@ import brakesImg from "../../images/brakes.jpg";
 import suspensionImg from "../../images/suspension.jpg";
 import iconEngine from "../../images/icon-engine.svg";
 import iconCar from "../../images/icon-car.svg";
-import iconChassis from "../../images/icon-chassis.svg";
 import iconWheel from "../../images/icon-wheel.svg";
+import iconChassis from "../../images/icon-chassis.svg";
 
 // Data
 const servicesInfo = [
@@ -25,7 +25,7 @@ const servicesInfo = [
     Icon: iconCar,
     Alt: "Tuning",
     Heading: "Tuning",
-    Text: "Tune for maximun power",
+    Text: "Tuned for maximun power",
     ButtonText: "Schedule",
   },
   {
