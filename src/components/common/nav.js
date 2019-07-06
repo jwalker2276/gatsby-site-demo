@@ -68,6 +68,7 @@ const StyledNavLink = styled(props => <Link {...props} />)`
   color: var(--neut-lightest);
   text-decoration: none;
   text-transform: uppercase;
+  text-shadow: 0px 0px 2px var(--neut-dark);
   display: flex;
   align-items: center;
   padding: 0 24px;

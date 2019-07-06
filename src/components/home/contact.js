@@ -74,6 +74,7 @@ const SectionLeft = styled.div`
 
 const SectionRight = styled.div`
   padding: 16px;
+  border-left: 4px solid var(--red-dark);
   background-color: var(--red-base);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.40' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
   color: var(--body-light);
@@ -100,6 +101,7 @@ const SectionTitle = styled.h1`
   font-size: 48px;
   padding: 12px 0;
   color: var(--heading-light);
+  text-shadow: 1px 1px 2px var(--neut-darkest);
 `;
 
 const ContactLabel = styled.h2`
@@ -107,10 +109,12 @@ const ContactLabel = styled.h2`
   font-weight: 700;
   margin: 0;
   color: var(--body-light);
+  text-shadow: 1px 1px 2px var(--neut-darkest);
 `;
 
 const ContactText = styled.p`
   font-size: 20px;
   margin: 16px 0 32px 0;
   color: var(--body-light);
+  text-shadow: 1px 1px 2px var(--neut-darkest);
 `;

@@ -169,6 +169,6 @@ const Text = styled.p`
 
 const StyledNavLink = styled(props => <Link {...props} />)`
   font-size: 16px;
-  color: var(--red-base);
-  text-decoration: underline;
+  color: var(--neut-lightest);
+  text-decoration: underline var(--red-base);
 `;

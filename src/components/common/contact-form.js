@@ -52,7 +52,7 @@ const ContactForm = () => {
   return (
     <Form onSubmit={handleSubmit}>
       <FormLabel htmlFor="name">
-        Name
+        Your Name
         <FormInput
           type="text"
           name="name"
@@ -62,7 +62,7 @@ const ContactForm = () => {
         />
       </FormLabel>
       <FormLabel htmlFor="email">
-        Email
+        Your Email
         <FormInput
           type="email"
           name="email"
@@ -111,6 +111,7 @@ const Form = styled.form`
 const FormLabel = styled.label`
   width: 100%;
   padding: 12px 0;
+  text-shadow: 0px 0px 20px var(--body-dark);
 `;
 
 const FormInput = styled.input`
@@ -120,6 +121,13 @@ const FormInput = styled.input`
   padding: 8px;
   background-color: var(--neut-lightest);
   border: none;
+  border-radius: 5px;
+  box-shadow: inset 1px 2px 3px 0px var(--neut-base),
+    inset -1px -1px 3px 0px white;
+
+  :focus {
+    outline-color: var(--red-dark);
+  }
 `;
 
 const FormMessage = styled.textarea`
@@ -129,6 +137,13 @@ const FormMessage = styled.textarea`
   margin-top: 12px;
   background-color: var(--neut-lightest);
   border: none;
+  border-radius: 5px;
+  box-shadow: inset 1px 2px 3px 0px var(--neut-base),
+    inset -1px -1px 3px 0px white;
+
+  :focus {
+    outline-color: var(--red-dark);
+  }
 `;
 
 const FormButton = styled.button`
@@ -137,7 +152,20 @@ const FormButton = styled.button`
   height: 48px;
   margin: 12px 0 0 0;
   font-size: 18px;
+  font-family: "Nunito", "sans-serif";
+  font-weight: 700;
   color: var(--body-light-t);
   background: var(--red-base);
   border: none;
+  border: 2px solid var(--red-dark);
+  border-radius: 5px;
+  box-shadow: 2px 3px 2px 0px var(--neut-darkest),
+    2px 6px 15px 0px var(--neut-darkest);
+  transition: box-shadow 0.1s ease-in, transform 0.1s ease-in;
+
+  :hover {
+    box-shadow: 2px 8px 2px 0px var(--neut-darkest),
+      2px 8px 15px 0px var(--neut-darkest);
+    transform: translate(0px, -2px);
+  }
 `;

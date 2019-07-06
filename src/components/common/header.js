@@ -92,6 +92,7 @@ const HeaderLeft = styled.div`
 const StyledLink = styled(props => <Link {...props} />)`
   text-decoration: none;
   color: var(--red-base);
+  text-shadow: 2px 2px 2px var(--red-darkest);
   font-size: 48px;
   font-style: italic;
   font-family: "Nunito", "sans-serif";
