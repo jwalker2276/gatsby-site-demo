@@ -17,7 +17,7 @@ const servicesInfo = [
     Icon: iconEngine,
     Alt: "Engine",
     Heading: "Engines",
-    Text: "Custom build engines",
+    Text: "Custom built engines",
     ButtonText: "Schedule",
   },
   {
