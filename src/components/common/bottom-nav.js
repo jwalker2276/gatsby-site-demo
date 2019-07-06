@@ -63,6 +63,18 @@ const BottomNav = () => {
         <List>
           <ListItem>
             <StyledNavLink to="/">Home</StyledNavLink>
+            <ListItem>
+              <StyledNavLink to="/services">Services</StyledNavLink>
+            </ListItem>
+          </ListItem>
+          <ListItem>
+            <StyledNavLink to="/about">About</StyledNavLink>
+          </ListItem>
+          <ListItem>
+            <StyledNavLink to="/cars">Cars</StyledNavLink>
+          </ListItem>
+          <ListItem>
+            <StyledNavLink to="/contact">Contact</StyledNavLink>
           </ListItem>
         </List>
       </SiteInfo>
