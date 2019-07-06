@@ -73,6 +73,7 @@ const BasicAd = styled.div`
   align-items: center;
   position: relative;
   overflow: hidden;
+  box-shadow: 2px 3px 2px 0px var(--shadow), 2px 8px 10px 0px var(--shadow);
 `;
 
 const AdLarge = styled(BasicAd)`
@@ -85,6 +86,7 @@ const AdText = styled.h2`
   font-size: 36px;
   margin: 12px;
   text-shadow: 0px 0px 20px var(--neut-darkest);
+  font-weight: 600;
 `;
 
 const AdTextSmall = styled.p`

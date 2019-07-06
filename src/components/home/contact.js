@@ -104,6 +104,7 @@ const SectionTitle = styled.h1`
 
 const ContactLabel = styled.h2`
   font-size: 20px;
+  font-weight: 700;
   margin: 0;
   color: var(--body-light);
 `;
@@ -112,9 +113,4 @@ const ContactText = styled.p`
   font-size: 20px;
   margin: 16px 0 32px 0;
   color: var(--body-light);
-`;
-
-const Icon = styled.img`
-  width: 16px;
-  margin-right: 16px;
 `;

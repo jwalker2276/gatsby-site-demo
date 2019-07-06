@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import React from "react";
 import styled from "styled-components";
 import { Link, useStaticQuery, graphql } from "gatsby";
@@ -95,6 +94,8 @@ const StyledLink = styled(props => <Link {...props} />)`
   color: var(--red-base);
   font-size: 48px;
   font-style: italic;
+  font-family: "Nunito", "sans-serif";
+  font-weight: 400;
   text-transform: uppercase;
 `;
 
@@ -117,6 +118,7 @@ const CallInfoTop = styled.p`
   text-transform: uppercase;
   margin: 0;
   opacity: 0.75;
+  color: var(--red-light);
 `;
 
 const CallInfoBottom = styled.p`

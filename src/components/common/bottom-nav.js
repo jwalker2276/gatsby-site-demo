@@ -2,14 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import { Link, graphql, useStaticQuery } from "gatsby";
 import Icon from "./social-icon";
-import { EmailIcon, PhoneIcon, LocationIcon } from './icons';
+import { EmailIcon, PhoneIcon, LocationIcon } from "./icons";
 import facebookIcon from "../../images/icon-facebook.svg";
 import twitterIcon from "../../images/icon-twitter.svg";
 import instagramIcon from "../../images/icon-insta.svg";
 import youtubeIcon from "../../images/icon-youtube.svg";
-import mailIcon from "../../images/icon-mail.svg";
-import phoneIcon from "../../images/icon-phone-ring.svg";
-import addressIcon from "../../images/icon-location-pin.svg";
 
 const BottomNav = () => {
   const data = useStaticQuery(graphql`
@@ -158,11 +155,6 @@ const IconList = styled.ul`
   display: grid;
   grid-template: 1fr / repeat(4, 1fr);
   margin-left: 0;
-`;
-
-const ListItemIcon = styled.img`
-  width: 16px;
-  margin-right: 16px;
 `;
 
 const ListItem = styled.li`

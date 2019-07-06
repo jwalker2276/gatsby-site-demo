@@ -35,6 +35,7 @@ const CardInner = styled.div`
   transform: translateY(-5px);
   z-index: 10;
   border-radius: 5px;
+  box-shadow: 2px 3px 2px 0px var(--shadow), 2px 8px 10px 0px var(--shadow);
 `;
 
 const CardIcon = styled.img`
@@ -66,8 +67,16 @@ const StyledNavLink = styled(props => <Link {...props} />)`
   padding: 16px 0px;
   background: var(--red-dark);
   border-radius: 10px;
+  border: 2px solid var(--red-base);
   width: 200px;
   margin-bottom: 32px;
+  box-shadow: 2px 3px 2px 0px var(--shadow), 2px 8px 10px 0px var(--shadow);
+  transition: box-shadow 0.1s ease-in, transform 0.1s ease-in;
+
+  :hover {
+    box-shadow: 2px 8px 2px 0px var(--shadow), 2px 8px 15px 0px var(--shadow);
+    transform: translate(0px, -2px);
+  }
 `;
 
 export default ServiceCard;
