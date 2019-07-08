@@ -23,13 +23,15 @@ const About = () => {
 
   return (
     <Section>
-      <SectionLeft>
-        <SectionTitle>About DownShift</SectionTitle>
-        <SectionParagraph>{data.site.siteMetadata.bio}</SectionParagraph>
-      </SectionLeft>
-      <SectionRight>
-        <Img fluid={data.file.childImageSharp.fluid} />
-      </SectionRight>
+      <SectionWrapper>
+        <SectionLeft>
+          <SectionTitle>About DownShift</SectionTitle>
+          <SectionParagraph>{data.site.siteMetadata.bio}</SectionParagraph>
+        </SectionLeft>
+        <SectionRight>
+          <Img fluid={data.file.childImageSharp.fluid} />
+        </SectionRight>
+      </SectionWrapper>
     </Section>
   );
 };
@@ -37,11 +39,17 @@ const About = () => {
 export default About;
 
 const Section = styled.section`
+  background-color: var(--neut-lighter);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.15' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+`;
+
+const SectionWrapper = styled.div`
   display: grid;
   grid-template: 1fr / 1fr 1fr;
   padding: 64px 16px;
-  background-color: var(--neut-lighter);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.15' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+  width: 100%;
+  margin: auto;
+  max-width: 1440px;
 `;
 
 const SectionLeft = styled.div`

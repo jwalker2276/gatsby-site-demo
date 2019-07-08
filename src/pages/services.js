@@ -9,8 +9,10 @@ const Services = () => (
     <GlobalStyle />
     <Layout>
       <Section>
-        <SectionHeading>Serivces</SectionHeading>
-        <ServicesList />
+        <SectionWrapper>
+          <SectionHeading>Serivces</SectionHeading>
+          <ServicesList />
+        </SectionWrapper>
       </Section>
     </Layout>
   </>
@@ -19,11 +21,17 @@ const Services = () => (
 export default Services;
 
 const Section = styled.section`
+  background-color: var(--neut-lightest);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.15' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+`;
+
+const SectionWrapper = styled.div`
   display: grid;
   grid-template: 1fr / 1fr;
   padding: 64px 16px;
-  background-color: var(--neut-lightest);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.15' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
 `;
 
 const SectionHeading = styled.h1`

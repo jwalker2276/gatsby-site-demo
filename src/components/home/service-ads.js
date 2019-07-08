@@ -59,6 +59,9 @@ const AdsWrapper = styled.div`
   height: 500px;
   grid-gap: 36px;
   padding: 0 16px;
+  width: 100%;
+  margin: auto;
+  max-width: 1440px;
 `;
 
 const BasicAd = styled.div`

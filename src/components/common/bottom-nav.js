@@ -37,80 +37,82 @@ const BottomNav = () => {
 
   return (
     <Section>
-      <GeneralInfo>
-        <SiteTitle>Downshift</SiteTitle>
-        <Text>Make driving fun again</Text>
-      </GeneralInfo>
-      <ContactInfo>
-        <ListTitle>Contact</ListTitle>
-        <List>
-          <ListItem>
-            <EmailIcon width="15px" color="hsl(4,77%,48%)" />
-            {email}
-          </ListItem>
-          <ListItem>
-            <PhoneIcon width="15px" color="hsl(4,77%,48%)" />
-            {phone}
-          </ListItem>
-          <ListItem>
-            <LocationIcon width="15px" color="hsl(4,77%,48%)" />
-            {address}
-          </ListItem>
-        </List>
-      </ContactInfo>
-      <SiteInfo>
-        <ListTitle>Site map</ListTitle>
-        <List>
-          <ListItem>
-            <StyledNavLink to="/">Home</StyledNavLink>
-          </ListItem>
-          <ListItem>
-            <StyledNavLink to="/services">Services</StyledNavLink>
-          </ListItem>
-          <ListItem>
-            <StyledNavLink to="/about">About</StyledNavLink>
-          </ListItem>
-          <ListItem>
-            <StyledNavLink to="/cars">Cars</StyledNavLink>
-          </ListItem>
-          <ListItem>
-            <StyledNavLink to="/contact">Contact</StyledNavLink>
-          </ListItem>
-        </List>
-      </SiteInfo>
-      <SocialInfo>
-        <ListTitle>Connect with us</ListTitle>
-        <IconList>
-          <ListItem>
-            <Icon
-              iconLink={youtube}
-              iconImage={youtubeIcon}
-              iconName="youtube"
-            />
-          </ListItem>
-          <ListItem>
-            <Icon
-              iconLink={instagram}
-              iconImage={instagramIcon}
-              iconName="instagram"
-            />
-          </ListItem>
-          <ListItem>
-            <Icon
-              iconLink={twitter}
-              iconImage={twitterIcon}
-              iconName="twitter"
-            />
-          </ListItem>
-          <ListItem>
-            <Icon
-              iconLink={facebook}
-              iconImage={facebookIcon}
-              iconName="facebook"
-            />
-          </ListItem>
-        </IconList>
-      </SocialInfo>
+      <SectionWrapper>
+        <GeneralInfo>
+          <SiteTitle>Downshift</SiteTitle>
+          <Text>Make driving fun again</Text>
+        </GeneralInfo>
+        <ContactInfo>
+          <ListTitle>Contact</ListTitle>
+          <List>
+            <ListItem>
+              <EmailIcon width="15px" color="hsl(4,77%,48%)" />
+              {email}
+            </ListItem>
+            <ListItem>
+              <PhoneIcon width="15px" color="hsl(4,77%,48%)" />
+              {phone}
+            </ListItem>
+            <ListItem>
+              <LocationIcon width="15px" color="hsl(4,77%,48%)" />
+              {address}
+            </ListItem>
+          </List>
+        </ContactInfo>
+        <SiteInfo>
+          <ListTitle>Site map</ListTitle>
+          <List>
+            <ListItem>
+              <StyledNavLink to="/">Home</StyledNavLink>
+            </ListItem>
+            <ListItem>
+              <StyledNavLink to="/services">Services</StyledNavLink>
+            </ListItem>
+            <ListItem>
+              <StyledNavLink to="/about">About</StyledNavLink>
+            </ListItem>
+            <ListItem>
+              <StyledNavLink to="/cars">Cars</StyledNavLink>
+            </ListItem>
+            <ListItem>
+              <StyledNavLink to="/contact">Contact</StyledNavLink>
+            </ListItem>
+          </List>
+        </SiteInfo>
+        <SocialInfo>
+          <ListTitle>Connect with us</ListTitle>
+          <IconList>
+            <ListItem>
+              <Icon
+                iconLink={youtube}
+                iconImage={youtubeIcon}
+                iconName="youtube"
+              />
+            </ListItem>
+            <ListItem>
+              <Icon
+                iconLink={instagram}
+                iconImage={instagramIcon}
+                iconName="instagram"
+              />
+            </ListItem>
+            <ListItem>
+              <Icon
+                iconLink={twitter}
+                iconImage={twitterIcon}
+                iconName="twitter"
+              />
+            </ListItem>
+            <ListItem>
+              <Icon
+                iconLink={facebook}
+                iconImage={facebookIcon}
+                iconName="facebook"
+              />
+            </ListItem>
+          </IconList>
+        </SocialInfo>
+      </SectionWrapper>
     </Section>
   );
 };
@@ -118,12 +120,18 @@ const BottomNav = () => {
 export default BottomNav;
 
 const Section = styled.section`
-  display: grid;
-  grid-template: 1fr / repeat(4, 1fr);
-  padding: 48px 16px;
   color: var(--body-light);
   background-color: var(--neut-dark);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.1' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+`;
+
+const SectionWrapper = styled.div`
+  display: grid;
+  grid-template: 1fr / repeat(4, 1fr);
+  padding: 48px 16px;
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
 `;
 
 const GeneralInfo = styled.div`

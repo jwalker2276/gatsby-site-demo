@@ -81,6 +81,9 @@ const HeaderTop = styled.div`
   grid-template-columns: 1fr auto;
   align-items: center;
   height: 100%;
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
 `;
 
 const HeaderLeft = styled.div`

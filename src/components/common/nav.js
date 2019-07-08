@@ -49,8 +49,10 @@ const NavList = styled.ul`
   margin: 0;
   display: flex;
   height: 100%;
+  width: 100%;
+  max-width: 1440px;
   align-items: center;
-  margin: 0px 16px;
+  margin: 0px auto;
   border-left: 1px solid var(--red-darkest);
   box-sizing: border-box;
 `;

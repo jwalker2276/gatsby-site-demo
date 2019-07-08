@@ -23,34 +23,36 @@ const Contact = () => {
 
   return (
     <Section>
-      <SectionLeft>
-        <ContactForm />
-      </SectionLeft>
-      <SectionRight>
-        <SectionRightBackground />
-        <SectionTitle>Contact Us</SectionTitle>
-        <ContactInfo>
-          <ContactLabel>Email:</ContactLabel>
-          <ContactText>
-            <EmailIcon width="20px" color="hsl(4,27%,98%)" />
-            {email}
-          </ContactText>
-        </ContactInfo>
-        <ContactInfo>
-          <ContactLabel>Phone:</ContactLabel>
-          <ContactText>
-            <PhoneIcon width="20px" color="hsl(4,27%,98%)" />
-            {phone}
-          </ContactText>
-        </ContactInfo>
-        <ContactInfo>
-          <ContactLabel>Address:</ContactLabel>
-          <ContactText>
-            <LocationIcon width="20px" color="hsl(4,27%,98%)" />
-            {address}
-          </ContactText>
-        </ContactInfo>
-      </SectionRight>
+      <SectionWrapper>
+        <SectionLeft>
+          <ContactForm />
+        </SectionLeft>
+        <SectionRight>
+          <SectionRightBackground />
+          <SectionTitle>Contact Us</SectionTitle>
+          <ContactInfo>
+            <ContactLabel>Email:</ContactLabel>
+            <ContactText>
+              <EmailIcon width="20px" color="hsl(4,27%,98%)" />
+              {email}
+            </ContactText>
+          </ContactInfo>
+          <ContactInfo>
+            <ContactLabel>Phone:</ContactLabel>
+            <ContactText>
+              <PhoneIcon width="20px" color="hsl(4,27%,98%)" />
+              {phone}
+            </ContactText>
+          </ContactInfo>
+          <ContactInfo>
+            <ContactLabel>Address:</ContactLabel>
+            <ContactText>
+              <LocationIcon width="20px" color="hsl(4,27%,98%)" />
+              {address}
+            </ContactText>
+          </ContactInfo>
+        </SectionRight>
+      </SectionWrapper>
     </Section>
   );
 };
@@ -58,8 +60,16 @@ const Contact = () => {
 export default Contact;
 
 const Section = styled.section`
+  background-color: var(--neut-lightest);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.15' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+`;
+
+const SectionWrapper = styled.div`
   display: grid;
   grid-template: 1fr / 3fr 2fr;
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
 `;
 
 const SectionLeft = styled.div`

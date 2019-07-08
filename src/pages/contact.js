@@ -43,66 +43,68 @@ const Contact = () => {
       <GlobalStyle />
       <Layout>
         <Section>
-          <SectionLeft>
-            <SectionHeading>Contact Us</SectionHeading>
-            <ContactInfo>
-              <ContactLabel>Email :</ContactLabel>
-              <ContactText>
-                <EmailIcon width="20px" color="hsl(4,2%,11%)" />
-                {email}
-              </ContactText>
-            </ContactInfo>
-            <ContactInfo>
-              <ContactLabel>Phone :</ContactLabel>
-              <ContactText>
-                <PhoneIcon width="20px" color="hsl(4,2%,11%)" />
-                {phone}
-              </ContactText>
-            </ContactInfo>
-            <ContactInfo>
-              <ContactLabel>Address :</ContactLabel>
-              <ContactText>
-                <LocationIcon width="20px" color="hsl(4,2%,11%)" />
-                {address}
-              </ContactText>
-            </ContactInfo>
-            <ContactInfo>
-              <ContactLabel>Connect with us :</ContactLabel>
-              <IconList>
-                <IconItem>
-                  <Icon
-                    iconLink={youtube}
-                    iconImage={youtubeIcon}
-                    iconName="youtube"
-                  />
-                </IconItem>
-                <IconItem>
-                  <Icon
-                    iconLink={instagram}
-                    iconImage={instagramIcon}
-                    iconName="instagram"
-                  />
-                </IconItem>
-                <IconItem>
-                  <Icon
-                    iconLink={twitter}
-                    iconImage={twitterIcon}
-                    iconName="twitter"
-                  />
-                </IconItem>
-                <IconItem>
-                  <Icon
-                    iconLink={facebook}
-                    iconImage={facebookIcon}
-                    iconName="facebook"
-                  />
-                </IconItem>
-              </IconList>
-            </ContactInfo>
-          </SectionLeft>
-          <SectionRight>
-            <ContactForm />
-          </SectionRight>
+          <SectionWrapper>
+            <SectionLeft>
+              <SectionHeading>Contact Us</SectionHeading>
+              <ContactInfo>
+                <ContactLabel>Email :</ContactLabel>
+                <ContactText>
+                  <EmailIcon width="20px" color="hsl(4,2%,11%)" />
+                  {email}
+                </ContactText>
+              </ContactInfo>
+              <ContactInfo>
+                <ContactLabel>Phone :</ContactLabel>
+                <ContactText>
+                  <PhoneIcon width="20px" color="hsl(4,2%,11%)" />
+                  {phone}
+                </ContactText>
+              </ContactInfo>
+              <ContactInfo>
+                <ContactLabel>Address :</ContactLabel>
+                <ContactText>
+                  <LocationIcon width="20px" color="hsl(4,2%,11%)" />
+                  {address}
+                </ContactText>
+              </ContactInfo>
+              <ContactInfo>
+                <ContactLabel>Connect with us :</ContactLabel>
+                <IconList>
+                  <IconItem>
+                    <Icon
+                      iconLink={youtube}
+                      iconImage={youtubeIcon}
+                      iconName="youtube"
+                    />
+                  </IconItem>
+                  <IconItem>
+                    <Icon
+                      iconLink={instagram}
+                      iconImage={instagramIcon}
+                      iconName="instagram"
+                    />
+                  </IconItem>
+                  <IconItem>
+                    <Icon
+                      iconLink={twitter}
+                      iconImage={twitterIcon}
+                      iconName="twitter"
+                    />
+                  </IconItem>
+                  <IconItem>
+                    <Icon
+                      iconLink={facebook}
+                      iconImage={facebookIcon}
+                      iconName="facebook"
+                    />
+                  </IconItem>
+                </IconList>
+              </ContactInfo>
+            </SectionLeft>
+            <SectionRight>
+              <ContactForm />
+            </SectionRight>
+          </SectionWrapper>
         </Section>
       </Layout>
     </>
@@ -112,11 +114,17 @@ const Contact = () => {
 export default Contact;
 
 const Section = styled.section`
+  background-color: var(--neut-lighter);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.15' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+`;
+
+const SectionWrapper = styled.div`
   display: grid;
   grid-template: auto 1fr / 1fr 1fr;
   padding: 64px 16px;
-  background-color: var(--neut-lighter);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.15' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
 `;
 
 const SectionLeft = styled.div`

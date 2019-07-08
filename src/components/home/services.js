@@ -80,5 +80,7 @@ const CardsWrapper = styled.div`
   grid-gap: 16px;
   justify-items: center;
   padding: 0 16px;
-  margin-bottom: 64px;
+  width: 100%;
+  margin: 0 auto 64px auto;
+  max-width: 1440px;
 `;
