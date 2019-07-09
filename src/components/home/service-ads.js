@@ -62,6 +62,11 @@ const AdsWrapper = styled.div`
   width: 100%;
   margin: auto;
   max-width: 1440px;
+  box-sizing: border-box;
+
+  @media (max-width: 960px) {
+    grid-template: repeat(3, 1fr) / 1fr;
+  }
 `;
 
 const BasicAd = styled.div`
@@ -82,6 +87,11 @@ const BasicAd = styled.div`
 const AdLarge = styled(BasicAd)`
   grid-column: 1 / 2;
   grid-row: 1 / -1;
+
+  @media (max-width: 960px) {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+  }
 `;
 
 const AdText = styled.h2`
@@ -90,6 +100,14 @@ const AdText = styled.h2`
   margin: 12px;
   text-shadow: 0px 0px 20px var(--neut-darkest);
   font-weight: 600;
+
+  @media (max-width: 1220px) {
+    font-size: 30px;
+  }
+
+  @media (max-width: 1060px) {
+    font-size: 24px;
+  }
 `;
 
 const AdTextSmall = styled.p`
@@ -97,16 +115,34 @@ const AdTextSmall = styled.p`
   font-size: 18px;
   margin: 0px;
   opacity: 0.9;
+
+  @media (max-width: 1220px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 1220px) {
+    font-size: 14px;
+  }
 `;
 
 const AdSmallOne = styled(BasicAd)`
   grid-column: 2 / -1;
   grid-row: 1 / 2;
+
+  @media (max-width: 960px) {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+  }
 `;
 
 const AdSmallTwo = styled(BasicAd)`
   grid-column: 2 / -1;
   grid-row: 2 / -1;
+
+  @media (max-width: 960px) {
+    grid-column: 1 / -1;
+    grid-row: 3 / -1;
+  }
 `;
 
 const Accent = styled.div`

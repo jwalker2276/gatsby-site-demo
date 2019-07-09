@@ -120,6 +120,7 @@ const FormInput = styled.input`
   margin-top: 12px;
   padding: 8px;
   background-color: var(--neut-lightest);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.15' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
   border: none;
   border-radius: 5px;
   box-shadow: inset 1px 2px 3px 0px var(--neut-base),
@@ -136,6 +137,7 @@ const FormMessage = styled.textarea`
   padding: 8px;
   margin-top: 12px;
   background-color: var(--neut-lightest);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.15' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
   border: none;
   border-radius: 5px;
   box-shadow: inset 1px 2px 3px 0px var(--neut-base),
