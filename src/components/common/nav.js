@@ -1,41 +1,105 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
 
-const Nav = () => (
-  <NavWrapper>
-    <NavList>
-      <NavListItem>
-        <StyledNavLink to="/" activeStyle={activeStyles}>
-          Home
-        </StyledNavLink>
-      </NavListItem>
-      <NavListItem>
-        <StyledNavLink to="/about" activeStyle={activeStyles}>
-          About
-        </StyledNavLink>
-      </NavListItem>
-      <NavListItem>
-        <StyledNavLink to="/services" activeStyle={activeStyles}>
-          Services
-        </StyledNavLink>
-      </NavListItem>
-      <NavListItem>
-        <StyledNavLink to="/cars" activeStyle={activeStyles}>
-          Cars
-        </StyledNavLink>
-      </NavListItem>
-      <NavListItem>
-        <StyledNavLink to="/contact" activeStyle={activeStyles}>
-          Contact
-        </StyledNavLink>
-      </NavListItem>
-    </NavList>
-  </NavWrapper>
-);
+const Nav = () => {
+  // State
+  const [isMobile, setIsMobile] = useState(false);
+  const [hasRun, toggleHasRun] = useState(false);
+
+  // Runs after each render
+  useEffect(() => {
+    // Run once on load.
+    if (hasRun === false) {
+      updateSize();
+      // Don't run again untill resize.
+      toggleHasRun();
+    }
+
+    // Function to run on load or whenn resize event fires
+    function updateSize() {
+      const mobileMaxWidth = 500;
+      const currentWidth = window.innerWidth;
+
+      if (currentWidth >= mobileMaxWidth && isMobile) {
+        setIsMobile(false);
+      } else if (currentWidth <= mobileMaxWidth && !isMobile) {
+        setIsMobile(true);
+      }
+    }
+
+    // Add event
+    window.addEventListener("resize", updateSize);
+
+    // Cleanup
+    return () => {
+      window.removeEventListener("resize", updateSize);
+    };
+  });
+
+  if (isMobile) {
+    return <NavWrapper />;
+  } else {
+    return (
+      <NavWrapper>
+        <NavList>
+          <NavListItem>
+            <StyledNavLink to="/" activeStyle={activeStyles}>
+              Home
+            </StyledNavLink>
+          </NavListItem>
+          <NavListItem>
+            <StyledNavLink to="/about" activeStyle={activeStyles}>
+              About
+            </StyledNavLink>
+          </NavListItem>
+          <NavListItem>
+            <StyledNavLink to="/services" activeStyle={activeStyles}>
+              Services
+            </StyledNavLink>
+          </NavListItem>
+          <NavListItem>
+            <StyledNavLink to="/cars" activeStyle={activeStyles}>
+              Cars
+            </StyledNavLink>
+          </NavListItem>
+          <NavListItem>
+            <StyledNavLink to="/contact" activeStyle={activeStyles}>
+              Contact
+            </StyledNavLink>
+          </NavListItem>
+        </NavList>
+      </NavWrapper>
+    );
+  }
+};
 
 export default Nav;
 
+// Mobile nav components
+const MobileMenuButton = styled.button`
+  position: relative;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+`;
+
+const MobileMenuLineTop = styled.span`
+  display: block;
+  position: absolute;
+  height: 7px;
+  width: 43px;
+  top: 13px;
+  right: 3px;
+  background-color: red;
+  transition: all 0.25s ease-in;
+`;
+
+const MobileMenuLineBotton = styled(MobileMenuLineTop)`
+  top: 32px;
+`;
+
+// Full width nav components
 const NavWrapper = styled.nav`
   grid-row: 2 / -1;
   grid-column: 1 / -1;

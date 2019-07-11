@@ -72,6 +72,10 @@ const HeaderWrapper = styled.header`
   align-items: center;
   color: var(--neut-lightest);
   background-color: var(--neut-darkest);
+
+  @media screen and (max-width: 500px) {
+    grid-template-rows: 64px 48px;
+  }
 `;
 
 const HeaderTop = styled.div`
@@ -101,6 +105,10 @@ const StyledLink = styled(props => <Link {...props} />)`
   font-family: "Nunito", "sans-serif";
   font-weight: 400;
   text-transform: uppercase;
+
+  @media screen and (max-width: 500px) {
+    font-size: 30px;
+  }
 `;
 
 const HeaderRight = styled.div`
@@ -108,6 +116,10 @@ const HeaderRight = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding-right: 16px;
+
+  @media screen and (max-width: 500px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const CallInfoWrapper = styled.div`
@@ -115,6 +127,10 @@ const CallInfoWrapper = styled.div`
   justify-items: left;
   align-items: center;
   padding-right: 16px;
+
+  @media screen and (max-width: 500px) {
+    justify-items: right;
+  }
 `;
 
 const CallInfoTop = styled.p`
@@ -128,6 +144,10 @@ const CallInfoTop = styled.p`
 const CallInfoBottom = styled.p`
   font-size: 20px;
   margin: 0;
+
+  @media screen and (max-width: 500px) {
+    font-size: 16px;
+  }
 `;
 
 const SocialIconsWrapper = styled.div`
@@ -136,4 +156,8 @@ const SocialIconsWrapper = styled.div`
   justify-items: center;
   align-items: center;
   grid-gap: 16px;
+
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
 `;
