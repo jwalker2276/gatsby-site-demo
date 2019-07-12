@@ -74,7 +74,7 @@ const HeaderWrapper = styled.header`
   background-color: var(--neut-darkest);
 
   @media screen and (max-width: 500px) {
-    grid-template-rows: 64px 48px;
+    grid-template-rows: 64px 55px;
   }
 `;
 
@@ -88,11 +88,19 @@ const HeaderTop = styled.div`
   width: 100%;
   max-width: 1440px;
   margin: auto;
+
+  @media (max-width: 500px) {
+    grid-template-columns: 1fr 1fr;
+  }
 `;
 
 const HeaderLeft = styled.div`
   grid-column: 1 / 2;
   padding-left: 16px;
+
+  @media (max-width: 500px) {
+    padding-left: 4px;
+  }
 `;
 
 // Logo
@@ -119,6 +127,7 @@ const HeaderRight = styled.div`
 
   @media screen and (max-width: 500px) {
     grid-template-columns: 1fr;
+    padding-right: 4px;
   }
 `;
 
@@ -130,6 +139,7 @@ const CallInfoWrapper = styled.div`
 
   @media screen and (max-width: 500px) {
     justify-items: right;
+    padding-right: 0px;
   }
 `;
 

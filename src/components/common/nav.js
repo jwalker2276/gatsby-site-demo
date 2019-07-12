@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
+import SocialIconGroup from "./social-icons-group";
 
 const Nav = () => {
   // State
   const [isMobile, setIsMobile] = useState(false);
   const [hasRun, toggleHasRun] = useState(false);
+  const [isOpen, toggleMenu] = useState(false);
 
   // Runs after each render
   useEffect(() => {
@@ -37,8 +39,21 @@ const Nav = () => {
     };
   });
 
+  const handleMenuButton = () => {
+    if (isOpen) toggleMenu(false);
+    else toggleMenu(true);
+  };
+
   if (isMobile) {
-    return <NavWrapper />;
+    return (
+      <NavWrapper>
+        <SocialIconGroup />
+        <MobileMenuButton onClick={handleMenuButton}>
+          <MobileMenuLineTop menuIsOpen={isOpen} />
+          <MobileMenuLineBottom menuIsOpen={isOpen} />
+        </MobileMenuButton>
+      </NavWrapper>
+    );
   } else {
     return (
       <NavWrapper>
@@ -79,24 +94,38 @@ export default Nav;
 // Mobile nav components
 const MobileMenuButton = styled.button`
   position: relative;
-  height: 50px;
+  grid-column: 2 / -1;
+  height: 100%;
   width: 50px;
+  justify-self: right;
+  padding: 0px;
+  border: 0;
   cursor: pointer;
+  background-color: rgba(0, 0, 0, 0);
+
+  :focus {
+    outline-style: dotted;
+    outline-color: var(--neut-lightest);
+    outline-width: thin;
+  }
 `;
 
 const MobileMenuLineTop = styled.span`
+  background-color: var(--neut-lightest);
   display: block;
   position: absolute;
+  top: ${props => (props.menuIsOpen ? "11px" : "21px")};
+  transform: ${props => (props.menuIsOpen ? "rotate(0deg)" : "rotate(135deg)")};
+  right: 2px;
+  width: 45px;
   height: 7px;
-  width: 43px;
-  top: 13px;
-  right: 3px;
-  background-color: red;
   transition: all 0.25s ease-in;
 `;
 
-const MobileMenuLineBotton = styled(MobileMenuLineTop)`
-  top: 32px;
+const MobileMenuLineBottom = styled(MobileMenuLineTop)`
+  top: ${props => (props.menuIsOpen ? "30px" : "21px")};
+  transform: ${props =>
+    props.menuIsOpen ? "rotate(0deg)" : "rotate(-135deg)"};
 `;
 
 // Full width nav components
@@ -106,6 +135,12 @@ const NavWrapper = styled.nav`
   height: 100%;
   background-color: var(--red-base);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+
+  @media (max-width: 500px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 4px;
+  }
 `;
 
 const NavList = styled.ul`
