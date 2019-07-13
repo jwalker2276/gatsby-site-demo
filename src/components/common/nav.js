@@ -20,8 +20,9 @@ const Nav = () => {
 
     // Function to run on load or whenn resize event fires
     function updateSize() {
-      const mobileMaxWidth = 500;
+      const mobileMaxWidth = 700;
       const currentWidth = window.innerWidth;
+      console.log(currentWidth);
 
       if (currentWidth >= mobileMaxWidth && isMobile) {
         setIsMobile(false);
@@ -114,8 +115,8 @@ const MobileMenuLineTop = styled.span`
   background-color: var(--neut-lightest);
   display: block;
   position: absolute;
-  top: ${props => (props.menuIsOpen ? "11px" : "21px")};
-  transform: ${props => (props.menuIsOpen ? "rotate(0deg)" : "rotate(135deg)")};
+  top: ${props => (props.menuIsOpen ? "21px" : "11px")};
+  transform: ${props => (props.menuIsOpen ? "rotate(135deg)" : "rotate(0deg)")};
   right: 2px;
   width: 45px;
   height: 7px;
@@ -123,9 +124,9 @@ const MobileMenuLineTop = styled.span`
 `;
 
 const MobileMenuLineBottom = styled(MobileMenuLineTop)`
-  top: ${props => (props.menuIsOpen ? "30px" : "21px")};
+  top: ${props => (props.menuIsOpen ? "21px" : "30px")};
   transform: ${props =>
-    props.menuIsOpen ? "rotate(0deg)" : "rotate(-135deg)"};
+    props.menuIsOpen ? "rotate(-135deg)" : "rotate(0deg)"};
 `;
 
 // Full width nav components
