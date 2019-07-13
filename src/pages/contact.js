@@ -6,6 +6,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import ContactForm from "../components/common/contact-form";
 import Icon from "../components/common/social-icon";
 import { EmailIcon, PhoneIcon, LocationIcon } from "../components/common/icons";
+import SectionTitle from "../components/common/section-title";
 import facebookIcon from "../images/icon-facebook.svg";
 import twitterIcon from "../images/icon-twitter.svg";
 import instagramIcon from "../images/icon-insta.svg";
@@ -45,7 +46,7 @@ const Contact = () => {
         <Section>
           <SectionWrapper>
             <SectionLeft>
-              <SectionHeading>Contact Us</SectionHeading>
+              <SectionTitle titleText="Contact Us" />
               <ContactInfo>
                 <ContactLabel>Email :</ContactLabel>
                 <ContactText>
@@ -135,13 +136,6 @@ const SectionLeft = styled.div`
 const SectionRight = styled.div`
   padding: 16px;
   background-color: var(--neut-darkest);
-`;
-
-const SectionHeading = styled.h1`
-  font-size: 48px;
-  margin: 16px 0 32px 0;
-  text-transform: uppercase;
-  color: var(--heading-dark);
 `;
 
 const ContactInfo = styled.div`

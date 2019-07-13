@@ -3,6 +3,7 @@ import Layout from "../components/common/layout";
 import GlobalStyle from "../components/common/global";
 import styled from "styled-components";
 import ServicesList from "../components/services/services-list";
+import SectionTitle from "../components/common/section-title";
 
 const Services = () => (
   <>
@@ -10,7 +11,7 @@ const Services = () => (
     <Layout>
       <Section>
         <SectionWrapper>
-          <SectionHeading>Serivces</SectionHeading>
+          <SectionTitle titleText="Serivces" />
           <ServicesList />
         </SectionWrapper>
       </Section>
@@ -32,11 +33,4 @@ const SectionWrapper = styled.div`
   width: 100%;
   max-width: 1440px;
   margin: auto;
-`;
-
-const SectionHeading = styled.h1`
-  font-size: 48px;
-  margin: 16px 0 32px 0;
-  text-transform: uppercase;
-  color: var(--heading-dark);
 `;

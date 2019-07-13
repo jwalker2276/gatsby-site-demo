@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import ServiceCard from "./service-card";
+import SectionTitle from "../common/section-title";
 import engineImg from "../../images/engine2.jpg";
 import tuningImg from "../../images/tuning.jpg";
 import brakesImg from "../../images/brakes.jpg";
@@ -49,7 +50,7 @@ const servicesInfo = [
 
 const Services = () => (
   <Section>
-    <SectionHeading>Popular Services We Offer</SectionHeading>
+    <SectionTitle titleText="Services We Offer" />
     <CardsWrapper>
       {servicesInfo.map(serviceData => (
         <ServiceCard key={serviceData.Heading} data={serviceData} />
@@ -66,14 +67,10 @@ const Section = styled.section`
   grid-template: auto auto auto / 1fr;
   background-color: var(--neut-lightest);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.15' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
-`;
 
-const SectionHeading = styled.h1`
-  font-size: 48px;
-  text-align: center;
-  margin: 64px;
-  text-transform: uppercase;
-  color: var(--heading-dark);
+  @media (max-width: 500px) {
+    justify-items: center;
+  }
 `;
 
 const CardsWrapper = styled.div`

@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import SectionTitle from "../common/section-title";
 import { useStaticQuery, graphql } from "gatsby";
 import ContactForm from "../common/contact-form";
 import motorImg from "../../images/motor.jpg";
@@ -29,7 +30,7 @@ const Contact = () => {
         </SectionLeft>
         <SectionRight>
           <SectionRightBackground />
-          <SectionTitle>Contact Us</SectionTitle>
+          <SectionTitle titleText="Contact Us" isDark={false} />
           <ContactInfo>
             <ContactLabel>Email:</ContactLabel>
             <ContactText>
@@ -105,13 +106,6 @@ const SectionRightBackground = styled.div`
 
 const ContactInfo = styled.div`
   z-index: 5;
-`;
-
-const SectionTitle = styled.h1`
-  font-size: 48px;
-  padding: 12px 0;
-  color: var(--heading-light);
-  text-shadow: 1px 1px 2px var(--neut-darkest);
 `;
 
 const ContactLabel = styled.h2`

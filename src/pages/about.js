@@ -4,6 +4,7 @@ import GlobalStyle from "../components/common/global";
 import { graphql, useStaticQuery } from "gatsby";
 import styled from "styled-components";
 import Img from "gatsby-image";
+import SectionTitle from "../components/common/section-title";
 
 const About = () => {
   const data = useStaticQuery(graphql`
@@ -30,7 +31,7 @@ const About = () => {
         <Section>
           <SectionWrapper>
             <SectionLeft>
-              <SectionTitle>About Downshift</SectionTitle>
+              <SectionTitle titleText="About Downshift" />
               <SectionParagraph>{data.site.siteMetadata.bio}</SectionParagraph>
             </SectionLeft>
             <SectionRight>
@@ -65,13 +66,6 @@ const SectionLeft = styled.div`
 
 const SectionRight = styled.div`
   grid-column: 2 / -1;
-`;
-
-const SectionTitle = styled.h1`
-  font-size: 48px;
-  margin: 16px 0 32px 0;
-  text-transform: uppercase;
-  color: var(--heading-dark);
 `;
 
 const SectionParagraph = styled.p`

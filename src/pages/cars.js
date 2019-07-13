@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "../components/common/layout";
 import GlobalStyle from "../components/common/global";
 import styled from "styled-components";
+import SectionTitle from "../components/common/section-title";
 
 const Cars = () => (
   <>
@@ -9,7 +10,7 @@ const Cars = () => (
     <Layout>
       <Section>
         <SectionWrapper>
-          <SectionHeading>Coming Soon...</SectionHeading>
+          <SectionTitle titleText="Coming Soon..." />
         </SectionWrapper>
       </Section>
     </Layout>
@@ -30,11 +31,4 @@ const SectionWrapper = styled.div`
   width: 100%;
   max-width: 1440px;
   margin: auto;
-`;
-
-const SectionHeading = styled.h1`
-  font-size: 48px;
-  margin: 16px 0 32px 0;
-  text-transform: uppercase;
-  color: var(--heading-dark);
 `;

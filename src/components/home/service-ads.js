@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import SectionTitle from "../common/section-title";
 import engineImg from "../../images/engine1.jpg";
 import exhaustImg from "../../images/exhaust.jpg";
 import rimImg from "../../images/rim.jpg";
@@ -7,7 +8,7 @@ import tagImg from "../../images/icon-tag.svg";
 
 const ServiceAds = () => (
   <Section>
-    <SectionTitle>Offers For You</SectionTitle>
+    <SectionTitle titleText="Offers For You" />
     <AdsWrapper>
       <AdLarge image={engineImg}>
         <Accent />
@@ -43,14 +44,10 @@ const Section = styled.section`
   padding-bottom: 96px;
   display: grid;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.15' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
-`;
 
-const SectionTitle = styled.h1`
-  font-size: 48px;
-  text-align: center;
-  margin: 64px;
-  text-transform: uppercase;
-  color: var(--heading-dark);
+  @media (max-width: 500px) {
+    justify-items: center;
+  }
 `;
 
 const AdsWrapper = styled.div`
