@@ -136,6 +136,10 @@ const SectionWrapper = styled.div`
 const SectionLeft = styled.div`
   padding: 16px;
   background-color: var(--neut-light);
+
+  @media screen and (max-width: 500px) {
+    padding: 0 12px;
+  }
 `;
 
 const SectionRight = styled.div`
@@ -165,6 +169,7 @@ const ContactText = styled.p`
 
   @media screen and (max-width: 500px) {
     font-size: 16px;
+    margin: 8px 0 24px 0;
   }
 `;
 

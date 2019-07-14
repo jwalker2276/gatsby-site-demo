@@ -19,7 +19,7 @@ const servicesInfo = [
     ImgSrc: tuningImg,
     Alt: "Tuning",
     Heading: "Tuning",
-    Text: "Tuned for maximun power for the street or the track",
+    Text: "Tuned for maximun power for the street or the track.",
     ButtonText: "Schedule",
   },
   {
@@ -27,7 +27,7 @@ const servicesInfo = [
     Alt: "Brakes",
     Heading: "Brakes",
     Text:
-      "More power means more speed. Upgrade your brakes show you can stop that beast.",
+      "More power means more speed. Upgrade your brakes so you can stop that beast.",
     ButtonText: "Schedule",
   },
   {
@@ -53,4 +53,11 @@ export default ServiceList;
 const List = styled.ul`
   margin: 16px 0;
   list-style: none;
+  border-top: 2px solid var(--shadow);
+  border-bottom: 2px solid var(--shadow);
+
+  @media screen and (max-width: 500px) {
+    margin: 0 0 16px 0;
+    padding: 16px 0;
+  }
 `;
