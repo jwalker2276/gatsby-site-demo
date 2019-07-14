@@ -53,6 +53,33 @@ const Nav = () => {
           <MobileMenuLineTop menuIsOpen={isOpen} />
           <MobileMenuLineBottom menuIsOpen={isOpen} />
         </MobileMenuButton>
+        <NavList menuIsOpen={isOpen}>
+          <NavListItem>
+            <StyledNavLink to="/" activeStyle={activeStylesMobile}>
+              Home
+            </StyledNavLink>
+          </NavListItem>
+          <NavListItem>
+            <StyledNavLink to="/about" activeStyle={activeStylesMobile}>
+              About
+            </StyledNavLink>
+          </NavListItem>
+          <NavListItem>
+            <StyledNavLink to="/services" activeStyle={activeStylesMobile}>
+              Services
+            </StyledNavLink>
+          </NavListItem>
+          <NavListItem>
+            <StyledNavLink to="/cars" activeStyle={activeStylesMobile}>
+              Cars
+            </StyledNavLink>
+          </NavListItem>
+          <NavListItem>
+            <StyledNavLink to="/contact" activeStyle={activeStylesMobile}>
+              Contact
+            </StyledNavLink>
+          </NavListItem>
+        </NavList>
       </NavWrapper>
     );
   } else {
@@ -107,7 +134,7 @@ const MobileMenuButton = styled.button`
   :focus {
     outline-style: dotted;
     outline-color: var(--neut-lightest);
-    outline-width: thin;
+    outline-width: thick;
   }
 `;
 
@@ -141,6 +168,7 @@ const NavWrapper = styled.nav`
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding: 4px;
+    position: relative;
   }
 `;
 
@@ -155,6 +183,21 @@ const NavList = styled.ul`
   margin: 0px auto;
   border-left: 1px solid var(--red-darkest);
   box-sizing: border-box;
+
+  @media (max-width: 500px) {
+    position: absolute;
+    top: 55px;
+    left: 0;
+    flex-direction: column;
+    background-color: var(--red-dark);
+    z-index: 20;
+    border: none;
+    border-bottom: 5px solid var(--red-base);
+    box-shadow: inset 0px 1px 1px 1px var(--shadow),
+      inset 0px -1px 1px 0px var(--highlight);
+    display: ${props => (props.menuIsOpen ? "flex" : "none")};
+    height: ${props => (props.menuIsOpen ? "auto" : "0px")};
+  }
 `;
 
 const NavListItem = styled.li`
@@ -162,6 +205,11 @@ const NavListItem = styled.li`
   display: flex;
   border-right: 1px solid var(--red-darkest);
   margin: 0;
+
+  @media (max-width: 500px) {
+    padding: 16px 0;
+    border: none;
+  }
 `;
 
 const StyledNavLink = styled(props => <Link {...props} />)`
@@ -175,9 +223,19 @@ const StyledNavLink = styled(props => <Link {...props} />)`
   align-items: center;
   padding: 0 24px;
   border-bottom: 4px solid var(--red-base);
+
+  @media (max-width: 500px) {
+    font-size: 20px;
+    border: none;
+    text-shadow: none;
+  }
 `;
 
 // This object is passed as props to the link component when page matches nav.
 const activeStyles = {
   borderBottom: "4px solid var(--red-lightest)",
+};
+
+const activeStylesMobile = {
+  borderBottom: "0px solid var(--red-lightest)",
 };

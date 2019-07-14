@@ -16,6 +16,7 @@ const GlobalStyle = createGlobalStyle`
     --neut-dark: hsla(4,2%,15%,1);
     --neut-darkest: hsla(4,2%,11%,1);
     --shadow: hsla(4,11%,11%, .2);
+    --highlight: hsla(4,15%,98%,.2);
     // Text
     --heading-dark: var(--neut-darkest);
     --body-dark: var(--neut-darkest);
