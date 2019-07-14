@@ -106,6 +106,11 @@ const Form = styled.form`
   grid-template: 1fr 1fr 1fr auto auto / 1fr;
   font-size: 18px;
   color: var(--body-light);
+
+  @media screen and (max-width: 500px) {
+    font-size: 16px;
+    padding: 8px;
+  }
 `;
 
 const FormLabel = styled.label`
@@ -161,6 +166,7 @@ const FormButton = styled.button`
   border: none;
   border: 2px solid var(--red-dark);
   border-radius: 5px;
+  text-transform: uppercase;
   box-shadow: 2px 3px 2px 0px var(--neut-darkest),
     2px 6px 15px 0px var(--neut-darkest);
   transition: box-shadow 0.1s ease-in, transform 0.1s ease-in;
@@ -169,5 +175,11 @@ const FormButton = styled.button`
     box-shadow: 2px 8px 2px 0px var(--neut-darkest),
       2px 8px 15px 0px var(--neut-darkest);
     transform: translate(0px, -2px);
+  }
+
+  @media screen and (max-width: 500px) {
+    justify-self: center;
+    width: 115px;
+    font-size: 16px;
   }
 `;

@@ -71,6 +71,10 @@ const SectionWrapper = styled.div`
   width: 100%;
   max-width: 1440px;
   margin: auto;
+
+  @media screen and (max-width: 500px) {
+    grid-template: auto 1fr / 1fr;
+  }
 `;
 
 const SectionLeft = styled.div`
@@ -81,6 +85,12 @@ const SectionLeft = styled.div`
     url(${motorImg});
   background-size: cover;
   background-repeat: no-repeat;
+
+  @media screen and (max-width: 500px) {
+    grid-template: auto 1fr / 1fr;
+    padding: 0 4px;
+    grid-row: 2 / -1;
+  }
 `;
 
 const SectionRight = styled.div`
@@ -90,6 +100,13 @@ const SectionRight = styled.div`
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.40' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
   color: var(--body-light);
   position: relative;
+
+  @media screen and (max-width: 500px) {
+    padding: 0 4px 32px 4px;
+    grid-row: 1 / 2;
+    border: none;
+    text-align: center;
+  }
 `;
 
 const SectionRightBackground = styled.div`
@@ -102,6 +119,12 @@ const SectionRightBackground = styled.div`
   background-size: cover;
   z-index: 1;
   opacity: 0.1;
+
+  @media screen and (max-width: 500px) {
+    width: 20%;
+    height: 25%;
+    right: 10px;
+  }
 `;
 
 const ContactInfo = styled.div`
@@ -114,6 +137,10 @@ const ContactLabel = styled.h2`
   margin: 0;
   color: var(--body-light);
   text-shadow: 1px 1px 2px var(--neut-darkest);
+
+  @media screen and (max-width: 500px) {
+    font-size: 16px;
+  }
 `;
 
 const ContactText = styled.p`
@@ -121,4 +148,9 @@ const ContactText = styled.p`
   margin: 16px 0 32px 0;
   color: var(--body-light);
   text-shadow: 1px 1px 2px var(--neut-darkest);
+
+  @media screen and (max-width: 500px) {
+    font-size: 16px;
+    margin: 8px 0 24px 0;
+  }
 `;
