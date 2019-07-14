@@ -126,6 +126,11 @@ const SectionWrapper = styled.div`
   width: 100%;
   max-width: 1440px;
   margin: auto;
+
+  @media screen and (max-width: 500px) {
+    padding: 0px 0px;
+    grid-template: 1fr / 1fr;
+  }
 `;
 
 const SectionLeft = styled.div`
@@ -147,12 +152,20 @@ const ContactLabel = styled.h2`
   font-weight: 700;
   margin: 0;
   color: var(--body-dark);
+
+  @media screen and (max-width: 500px) {
+    font-size: 16px;
+  }
 `;
 
 const ContactText = styled.p`
   font-size: 20px;
   margin: 16px 0 32px 0;
   color: var(--body-dark);
+
+  @media screen and (max-width: 500px) {
+    font-size: 16px;
+  }
 `;
 
 const IconList = styled.ul`

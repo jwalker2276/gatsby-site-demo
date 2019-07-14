@@ -31,4 +31,9 @@ const SectionWrapper = styled.div`
   width: 100%;
   max-width: 1440px;
   margin: auto;
+
+  @media screen and (max-width: 500px) {
+    padding: 0px 4px;
+    grid-template: 1fr / 1fr;
+  }
 `;

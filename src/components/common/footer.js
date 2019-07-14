@@ -32,6 +32,10 @@ const FooterText = styled.p`
   font-size: 16px;
   margin-bottom: 0;
   padding: 4px 0;
+
+  @media screen and (max-width: 500px) {
+    font-size: 14px;
+  }
 `;
 
 const ExternalLink = styled.a`
