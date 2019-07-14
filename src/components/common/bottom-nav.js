@@ -132,22 +132,54 @@ const SectionWrapper = styled.div`
   width: 100%;
   max-width: 1440px;
   margin: auto;
+
+  @media screen and (max-width: 500px) {
+    padding: 36px 4px;
+    grid-template: repeat(4, auto) / 1fr auto 1fr;
+  }
 `;
 
 const GeneralInfo = styled.div`
   grid-column: 1 / 2;
+
+  @media screen and (max-width: 500px) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    padding-bottom: 36px;
+    text-align: center;
+  }
 `;
 
 const ContactInfo = styled.div`
   grid-column: 2 / 3;
+
+  @media screen and (max-width: 500px) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    padding-bottom: 36px;
+    text-align: center;
+  }
 `;
 
 const SiteInfo = styled.div`
   grid-column: 3 / 4;
+
+  @media screen and (max-width: 500px) {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    padding-bottom: 36px;
+    text-align: center;
+  }
 `;
 
 const SocialInfo = styled.div`
   grid-column: 4 / -1;
+
+  @media screen and (max-width: 500px) {
+    grid-column: 2 / 3;
+    grid-row: 4 / -1;
+    text-align: center;
+  }
 `;
 
 const SiteTitle = styled.h1`
