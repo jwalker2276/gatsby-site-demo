@@ -18,7 +18,8 @@ const StyledHeading = styled.h1`
   color: var(--heading-dark);
 
   @media (max-width: 500px) {
-    font-size: 24px;
+    font-size: 30px;
+    margin: 32px 0 32px 0;
   }
 `;
 

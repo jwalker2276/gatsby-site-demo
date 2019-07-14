@@ -5,7 +5,7 @@ import { Link } from "gatsby";
 const ServiceCard = ({ data }) => (
   <CardWrapper>
     <CardImage src={data.ImgSrc} alt={data.Alt} />
-    <CardInner>
+    <CardInner image={data.ImgSrc}>
       <CardIcon src={data.Icon} alt="Service Icon" />
       <CardTitle>{data.Heading}</CardTitle>
       <CardDesc>{data.Text}</CardDesc>
@@ -20,11 +20,15 @@ const CardWrapper = styled.div`
   justify-items: center;
 
   @media screen and (max-width: 960px) {
-    border-radius: 5px;
     grid-template: auto / 1fr 3fr;
     align-items: center;
     background-color: var(--neut-lighter);
     box-shadow: 1px 3px 2px 2px var(--shadow), 1px 2px 10px 2px var(--shadow);
+  }
+
+  @media screen and (max-width: 500px) {
+    width: 100%;
+    grid-template: auto / 1fr;
   }
 `;
 
@@ -35,6 +39,10 @@ const CardImage = styled.img`
   @media screen and (max-width: 960px) {
     margin-bottom: 0;
   }
+
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
 `;
 
 const CardInner = styled.div`
@@ -43,10 +51,8 @@ const CardInner = styled.div`
   justify-items: center;
   background-color: var(--neut-lightest);
   grid-template: repeat(4, auto) / 310px;
-  box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.25);
   transform: translateY(-5px);
   z-index: 10;
-  border-radius: 5px;
   box-shadow: 2px 3px 2px 0px var(--shadow), 2px 8px 10px 0px var(--shadow);
 
   @media screen and (max-width: 1360px) {
@@ -67,6 +73,13 @@ const CardInner = styled.div`
     height: 100%;
     padding: 16px 0 16px 16px;
     box-shadow: none;
+  }
+
+  @media screen and (max-width: 500px) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+      url(${props => props.image});
+    background-size: cover;
+    padding: 16px 0 16px 8px;
   }
 `;
 
@@ -101,6 +114,10 @@ const CardTitle = styled.h2`
   @media screen and (max-width: 700px) {
     font-size: 24px;
   }
+
+  @media screen and (max-width: 500px) {
+    color: var(--body-light);
+  }
 `;
 
 const CardDesc = styled.p`
@@ -121,6 +138,14 @@ const CardDesc = styled.p`
     grid-column: 1 / 2;
     grid-row: 2 / -1;
     margin: 0;
+  }
+
+  @media screen and (max-width: 500px) {
+    grid-column: 1 / 2;
+    grid-row: 2 / -1;
+    margin-top: 16px;
+    text-align: left;
+    color: var(--body-light);
   }
 `;
 
@@ -160,6 +185,10 @@ const StyledNavLink = styled(props => <Link {...props} />)`
     font-size: 14px;
     padding: 12px 0;
     width: 115px;
+  }
+
+  @media screen and (max-width: 500px) {
+    margin-right: 8px;
   }
 `;
 

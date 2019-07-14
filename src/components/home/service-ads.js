@@ -64,6 +64,10 @@ const AdsWrapper = styled.div`
   @media (max-width: 960px) {
     grid-template: repeat(3, 1fr) / 1fr;
   }
+
+  @media (max-width: 500px) {
+    padding: 0 4px;
+  }
 `;
 
 const BasicAd = styled.div`
@@ -104,6 +108,10 @@ const AdText = styled.h2`
 
   @media (max-width: 1060px) {
     font-size: 24px;
+  }
+
+  @media (max-width: 500px) {
+    font-size: 20px;
   }
 `;
 

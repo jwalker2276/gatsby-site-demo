@@ -86,6 +86,7 @@ const CardsWrapper = styled.div`
   @media screen and (max-width: 960px) {
     grid-template: repeat(4, 1fr) / 1fr;
     grid-row-gap: 32px;
+    padding: 0 4px;
   }
 `;
 
@@ -112,5 +113,12 @@ const StyledNavLink = styled(props => <Link {...props} />)`
     color: var(--body-light);
     box-shadow: 2px 8px 2px 0px var(--shadow), 2px 8px 15px 0px var(--shadow);
     transform: translate(0px, -2px);
+  }
+
+  @media screen and (max-width: 500px) {
+    font-size: 14px;
+    padding: 12px 0;
+    width: 192px;
+    margin: 0px auto 64px auto;
   }
 `;

@@ -51,16 +51,30 @@ const SectionWrapper = styled.div`
   width: 100%;
   margin: auto;
   max-width: 1440px;
+
+  @media screen and (max-width: 500px) {
+    padding: 0px 4px;
+    grid-template: 1fr / 1fr;
+  }
 `;
 
 const SectionLeft = styled.div`
   display: grid;
   grid-template: auto auto / 1fr;
   grid-column: 1 / 2;
+
+  @media screen and (max-width: 500px) {
+    justify-items: center;
+    padding: 0 8px;
+  }
 `;
 
 const SectionRight = styled.div`
   grid-column: 2 / -1;
+
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
 `;
 
 const SectionParagraph = styled.p`
@@ -70,4 +84,11 @@ const SectionParagraph = styled.p`
   line-height: 1.75;
   margin-bottom: 32px;
   border-bottom: 2px solid var(--shadow);
+
+  @media screen and (max-width: 500px) {
+    width: auto;
+    font-size: 14px;
+    border-top: 2px solid var(--shadow);
+    padding: 16px 0;
+  }
 `;
