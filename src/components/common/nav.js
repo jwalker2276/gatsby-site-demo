@@ -134,7 +134,7 @@ const MobileMenuButton = styled.button`
   :focus {
     outline-style: dotted;
     outline-color: var(--neut-lightest);
-    outline-width: thick;
+    outline-width: thin;
   }
 `;
 
@@ -164,11 +164,15 @@ const NavWrapper = styled.nav`
   background-color: var(--red-base);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 
-  @media (max-width: 500px) {
+  @media (max-width: 700px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 4px;
+    padding: 0 16px;
     position: relative;
+  }
+
+  @media (max-width: 500px) {
+    padding: 4px;
   }
 `;
 
@@ -184,7 +188,7 @@ const NavList = styled.ul`
   border-left: 1px solid var(--red-darkest);
   box-sizing: border-box;
 
-  @media (max-width: 500px) {
+  @media (max-width: 700px) {
     position: absolute;
     top: 55px;
     left: 0;
@@ -207,7 +211,7 @@ const NavListItem = styled.li`
   border-right: 1px solid var(--red-darkest);
   margin: 0;
 
-  @media (max-width: 500px) {
+  @media (max-width: 700px) {
     padding: 16px 0;
     border: none;
   }
@@ -225,7 +229,7 @@ const StyledNavLink = styled(props => <Link {...props} />)`
   padding: 0 24px;
   border-bottom: 4px solid var(--red-base);
 
-  @media (max-width: 500px) {
+  @media (max-width: 700px) {
     font-size: 20px;
     border: none;
     text-shadow: none;

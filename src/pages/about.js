@@ -58,6 +58,12 @@ const SectionWrapper = styled.div`
   width: 100%;
   max-width: 1440px;
   margin: auto;
+  align-items: center;
+
+  @media screen and (max-width: 500px) {
+    padding: 0px 4px;
+    grid-template: 1fr / 1fr;
+  }
 
   @media screen and (max-width: 500px) {
     padding: 0px 4px;
@@ -90,11 +96,14 @@ const SectionParagraph = styled.p`
   margin-bottom: 32px;
   border-right: 2px solid var(--shadow);
 
+  @media screen and (max-width: 1300px) {
+    border-right: none;
+  }
+
   @media screen and (max-width: 500px) {
     width: auto;
     font-size: 14px;
     border-top: 2px solid var(--shadow);
-    border-right: none;
     border-bottom: 2px solid var(--shadow);
     padding: 16px 0;
   }

@@ -67,10 +67,7 @@ const Section = styled.section`
   grid-template: auto auto auto / 1fr;
   background-color: var(--neut-lightest);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.15' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
-
-  @media (max-width: 500px) {
-    justify-items: center;
-  }
+  justify-items: center;
 `;
 
 const CardsWrapper = styled.div`
@@ -113,6 +110,18 @@ const StyledNavLink = styled(props => <Link {...props} />)`
     color: var(--body-light);
     box-shadow: 2px 8px 2px 0px var(--shadow), 2px 8px 15px 0px var(--shadow);
     transform: translate(0px, -2px);
+  }
+
+  @media screen and (max-width: 1160px) {
+    font-size: 16px;
+    padding: 12px 0px;
+    width: 150px;
+  }
+
+  @media screen and (max-width: 960px) {
+    font-size: 14px;
+    padding: 12px 0;
+    width: 150px;
   }
 
   @media screen and (max-width: 500px) {

@@ -125,8 +125,12 @@ const HeaderRight = styled.div`
   grid-template-columns: 1fr 1fr;
   padding-right: 16px;
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 700px) {
     grid-template-columns: 1fr;
+    padding-right: 0px;
+  }
+
+  @media screen and (max-width: 500px) {
     padding-right: 4px;
   }
 `;
@@ -137,8 +141,11 @@ const CallInfoWrapper = styled.div`
   align-items: center;
   padding-right: 16px;
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 700px) {
     justify-items: right;
+  }
+
+  @media screen and (max-width: 500px) {
     padding-right: 0px;
   }
 `;
@@ -167,7 +174,7 @@ const SocialIconsWrapper = styled.div`
   align-items: center;
   grid-gap: 16px;
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 700px) {
     display: none;
   }
 `;

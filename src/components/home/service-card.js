@@ -24,11 +24,14 @@ const CardWrapper = styled.div`
     align-items: center;
     background-color: var(--neut-lighter);
     box-shadow: 1px 3px 2px 2px var(--shadow), 1px 2px 10px 2px var(--shadow);
+    border-radius: 5px;
+    margin: 0 16px;
   }
 
   @media screen and (max-width: 500px) {
     width: 100%;
     grid-template: auto / 1fr;
+    border-radius: 5px;
   }
 `;
 
@@ -38,6 +41,10 @@ const CardImage = styled.img`
 
   @media screen and (max-width: 960px) {
     margin-bottom: 0;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 5px;
   }
 
   @media screen and (max-width: 500px) {
@@ -47,6 +54,7 @@ const CardImage = styled.img`
 
 const CardInner = styled.div`
   display: grid;
+  border-radius: 5px;
   align-items: center;
   justify-items: center;
   background-color: var(--neut-lightest);

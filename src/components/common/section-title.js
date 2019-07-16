@@ -13,7 +13,7 @@ export default SectionTitle;
 
 const StyledHeading = styled.h1`
   font-size: 48px;
-  margin: 16px 0 32px 0;
+  margin: 32px 0 32px 0;
   text-transform: uppercase;
   color: var(--heading-dark);
 
