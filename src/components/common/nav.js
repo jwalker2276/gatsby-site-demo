@@ -142,7 +142,7 @@ const MobileMenuLineTop = styled.span`
   background-color: var(--neut-lightest);
   display: block;
   position: absolute;
-  top: ${props => (props.menuIsOpen ? "21px" : "11px")};
+  top: ${props => (props.menuIsOpen ? "24px" : "18px")};
   transform: ${props => (props.menuIsOpen ? "rotate(135deg)" : "rotate(0deg)")};
   right: 2px;
   width: 45px;
@@ -151,7 +151,7 @@ const MobileMenuLineTop = styled.span`
 `;
 
 const MobileMenuLineBottom = styled(MobileMenuLineTop)`
-  top: ${props => (props.menuIsOpen ? "21px" : "30px")};
+  top: ${props => (props.menuIsOpen ? "24px" : "37px")};
   transform: ${props =>
     props.menuIsOpen ? "rotate(-135deg)" : "rotate(0deg)"};
 `;

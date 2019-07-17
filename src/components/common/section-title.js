@@ -17,9 +17,12 @@ const StyledHeading = styled.h1`
   text-transform: uppercase;
   color: var(--heading-dark);
 
+  @media (max-width: 800px) {
+    font-size: 36px;
+  }
+
   @media (max-width: 500px) {
     font-size: 30px;
-    margin: 32px 0 32px 0;
   }
 `;
 

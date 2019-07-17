@@ -51,8 +51,10 @@ const SectionWrapper = styled.div`
   width: 100%;
   margin: auto;
   max-width: 1440px;
+  align-items: center;
+  grid-column-gap: 32px;
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 960px) {
     padding: 0px 4px;
     grid-template: 1fr / 1fr;
   }
@@ -63,7 +65,7 @@ const SectionLeft = styled.div`
   grid-template: auto auto / 1fr;
   grid-column: 1 / 2;
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 960px) {
     justify-items: center;
     padding: 0 8px;
   }
@@ -72,7 +74,7 @@ const SectionLeft = styled.div`
 const SectionRight = styled.div`
   grid-column: 2 / -1;
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 960px) {
     display: none;
   }
 `;
@@ -83,12 +85,17 @@ const SectionParagraph = styled.p`
   width: 35em;
   line-height: 1.75;
   margin-bottom: 32px;
+  padding-bottom: 32px;
   border-bottom: 2px solid var(--shadow);
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 700px) {
     width: auto;
-    font-size: 14px;
+    font-size: 16px;
     border-top: 2px solid var(--shadow);
     padding: 16px 0;
+  }
+
+  @media screen and (max-width: 500px) {
+    font-size: 14px;
   }
 `;

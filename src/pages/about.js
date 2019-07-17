@@ -59,22 +59,26 @@ const SectionWrapper = styled.div`
   max-width: 1440px;
   margin: auto;
   align-items: center;
+  grid-column-gap: 32px;
 
-  @media screen and (max-width: 500px) {
-    padding: 0px 4px;
-    grid-template: 1fr / 1fr;
-  }
-
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 960px) {
     padding: 0px 4px;
     grid-template: 1fr / 1fr;
   }
 `;
 
 const SectionLeft = styled.div`
+  display: grid;
+  grid-template: auto auto / 1fr;
   grid-column: 1 / 2;
+  border-right: 2px solid var(--shadow);
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 1360px) {
+    border-right: none;
+  }
+
+  @media screen and (max-width: 960px) {
+    border-right: none;
     justify-items: center;
     padding: 0 8px;
   }
@@ -83,7 +87,7 @@ const SectionLeft = styled.div`
 const SectionRight = styled.div`
   grid-column: 2 / -1;
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 960px) {
     display: none;
   }
 `;
@@ -94,17 +98,19 @@ const SectionParagraph = styled.p`
   width: 35em;
   line-height: 1.75;
   margin-bottom: 32px;
-  border-right: 2px solid var(--shadow);
 
   @media screen and (max-width: 1300px) {
-    border-right: none;
+    border-top: 2px solid var(--shadow);
+    padding: 16px 0;
+  }
+
+  @media screen and (max-width: 700px) {
+    width: auto;
+    font-size: 16px;
   }
 
   @media screen and (max-width: 500px) {
-    width: auto;
     font-size: 14px;
-    border-top: 2px solid var(--shadow);
     border-bottom: 2px solid var(--shadow);
-    padding: 16px 0;
   }
 `;

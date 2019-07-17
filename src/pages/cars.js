@@ -26,7 +26,7 @@ const Section = styled.section`
 
 const SectionWrapper = styled.div`
   display: grid;
-  grid-template: auto 1fr / 1fr 1fr;
+  grid-template: auto 1fr / 1fr;
   padding: 64px 16px;
   width: 100%;
   max-width: 1440px;

@@ -127,7 +127,7 @@ const SectionWrapper = styled.div`
   max-width: 1440px;
   margin: auto;
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 900px) {
     padding: 0px 0px;
     grid-template: 1fr / 1fr;
   }
@@ -137,7 +137,7 @@ const SectionLeft = styled.div`
   padding: 16px;
   background-color: var(--neut-light);
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 900px) {
     padding: 0 12px;
   }
 `;

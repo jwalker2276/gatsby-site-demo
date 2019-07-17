@@ -72,7 +72,7 @@ const SectionWrapper = styled.div`
   max-width: 1440px;
   margin: auto;
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 800px) {
     grid-template: auto 1fr / 1fr;
   }
 `;
@@ -86,7 +86,7 @@ const SectionLeft = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 800px) {
     grid-template: auto 1fr / 1fr;
     padding: 0 4px;
     grid-row: 2 / -1;
@@ -115,14 +115,27 @@ const SectionRightBackground = styled.div`
   bottom: 0;
   width: 50%;
   height: 50%;
+  right: 15px;
   background-image: url(${IconPedals});
   background-size: cover;
   z-index: 1;
-  opacity: 0.1;
+  opacity: 0.05;
+
+  @media screen and (max-width: 1100px) {
+    width: 40%;
+    height: 30%;
+    right: 40px;
+  }
+
+  @media screen and (max-width: 800px) {
+    width: 25%;
+    height: 50%;
+    right: 40px;
+  }
 
   @media screen and (max-width: 500px) {
     width: 20%;
-    height: 25%;
+    height: 30%;
     right: 10px;
   }
 `;

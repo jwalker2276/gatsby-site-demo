@@ -133,7 +133,7 @@ const SectionWrapper = styled.div`
   max-width: 1440px;
   margin: auto;
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 800px) {
     padding: 36px 4px;
     grid-template: repeat(4, auto) / 1fr auto 1fr;
   }
@@ -142,7 +142,7 @@ const SectionWrapper = styled.div`
 const GeneralInfo = styled.div`
   grid-column: 1 / 2;
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 800px) {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
     padding-bottom: 36px;
@@ -153,7 +153,7 @@ const GeneralInfo = styled.div`
 const ContactInfo = styled.div`
   grid-column: 2 / 3;
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 800px) {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     padding-bottom: 36px;
@@ -164,7 +164,7 @@ const ContactInfo = styled.div`
 const SiteInfo = styled.div`
   grid-column: 3 / 4;
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 800px) {
     grid-column: 2 / 3;
     grid-row: 3 / 4;
     padding-bottom: 36px;
@@ -175,7 +175,7 @@ const SiteInfo = styled.div`
 const SocialInfo = styled.div`
   grid-column: 4 / -1;
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 800px) {
     grid-column: 2 / 3;
     grid-row: 4 / -1;
     text-align: center;
