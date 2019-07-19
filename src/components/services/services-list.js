@@ -51,13 +51,14 @@ const ServiceList = () => (
 export default ServiceList;
 
 const List = styled.ul`
-  margin: 16px 0;
+  margin: 0;
+  padding: 16px 0 0 0;
   list-style: none;
   border-top: 2px solid var(--shadow);
   border-bottom: 2px solid var(--shadow);
 
   @media screen and (max-width: 500px) {
     margin: 0 0 16px 0;
-    padding: 16px 0;
+    padding: 16px 0 0 0;
   }
 `;

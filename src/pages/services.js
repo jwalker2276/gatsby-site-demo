@@ -33,12 +33,16 @@ const Section = styled.section`
 const SectionWrapper = styled.div`
   display: grid;
   grid-template: 1fr / 1fr;
-  padding: 64px 16px;
+  padding: 0 16px 16px 16px;
   width: 100%;
   max-width: 1440px;
   margin: auto;
 
   @media screen and (max-width: 960px) {
-    padding: 0 4px;
+    padding: 0 16px 16px 16px;
+  }
+
+  @media screen and (max-width: 500px) {
+    padding: 0 4px 16px 4px;
   }
 `;

@@ -107,9 +107,12 @@ const Form = styled.form`
   font-size: 18px;
   color: var(--body-light);
 
+  @media screen and (max-width: 800px) {
+    padding: 0px;
+  }
+
   @media screen and (max-width: 500px) {
     font-size: 16px;
-    padding: 8px;
   }
 `;
 
@@ -158,6 +161,7 @@ const FormButton = styled.button`
   width: 128px;
   height: 48px;
   margin: 12px 0 0 0;
+  justify-self: center;
   font-size: 18px;
   font-family: "Nunito", "sans-serif";
   font-weight: 700;
@@ -178,7 +182,6 @@ const FormButton = styled.button`
   }
 
   @media screen and (max-width: 500px) {
-    justify-self: center;
     width: 115px;
     font-size: 16px;
   }

@@ -80,7 +80,7 @@ const SectionWrapper = styled.div`
 const SectionLeft = styled.div`
   background-color: var(--neut-darkest);
   color: var(--body-light);
-  padding: 16px;
+  padding: 64px 48px;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url(${motorImg});
   background-size: cover;
@@ -88,8 +88,12 @@ const SectionLeft = styled.div`
 
   @media screen and (max-width: 800px) {
     grid-template: auto 1fr / 1fr;
-    padding: 0 4px;
+    padding: 16px;
     grid-row: 2 / -1;
+  }
+
+  @media screen and (max-width: 500px) {
+    padding: 0 4px;
   }
 `;
 
@@ -134,7 +138,7 @@ const SectionRightBackground = styled.div`
   }
 
   @media screen and (max-width: 500px) {
-    width: 20%;
+    width: 25%;
     height: 30%;
     right: 10px;
   }

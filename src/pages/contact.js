@@ -138,7 +138,7 @@ const SectionLeft = styled.div`
   background-color: var(--neut-light);
 
   @media screen and (max-width: 900px) {
-    padding: 0 12px;
+    padding: 0 16px;
   }
 `;
 

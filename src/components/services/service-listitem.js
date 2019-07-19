@@ -110,6 +110,6 @@ const StyledNavLink = styled(props => <Link {...props} />)`
     font-size: 14px;
     width: 115px;
     padding: 14px;
-    margin: 0 4px 0 24px;
+    margin: 0 8px 0 24px;
   }
 `;

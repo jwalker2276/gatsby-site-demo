@@ -22,7 +22,6 @@ const Nav = () => {
     function updateSize() {
       const mobileMaxWidth = 700;
       const currentWidth = window.innerWidth;
-      console.log(currentWidth);
 
       if (currentWidth >= mobileMaxWidth && isMobile) {
         setIsMobile(false);
@@ -134,7 +133,7 @@ const MobileMenuButton = styled.button`
   :focus {
     outline-style: dotted;
     outline-color: var(--neut-lightest);
-    outline-width: thin;
+    outline-width: thick;
   }
 `;
 
@@ -142,7 +141,7 @@ const MobileMenuLineTop = styled.span`
   background-color: var(--neut-lightest);
   display: block;
   position: absolute;
-  top: ${props => (props.menuIsOpen ? "24px" : "18px")};
+  top: ${props => (props.menuIsOpen ? "20px" : "12px")};
   transform: ${props => (props.menuIsOpen ? "rotate(135deg)" : "rotate(0deg)")};
   right: 2px;
   width: 45px;
@@ -151,12 +150,12 @@ const MobileMenuLineTop = styled.span`
 `;
 
 const MobileMenuLineBottom = styled(MobileMenuLineTop)`
-  top: ${props => (props.menuIsOpen ? "24px" : "37px")};
+  top: ${props => (props.menuIsOpen ? "20px" : "30px")};
   transform: ${props =>
     props.menuIsOpen ? "rotate(-135deg)" : "rotate(0deg)"};
 `;
 
-// Full width nav components
+// Full width and mobile nav components
 const NavWrapper = styled.nav`
   grid-row: 2 / -1;
   grid-column: 1 / -1;
@@ -187,6 +186,7 @@ const NavList = styled.ul`
   margin: 0px auto;
   border-left: 1px solid var(--red-darkest);
   box-sizing: border-box;
+  border-bottom: 2px solid var(--shadow);
 
   @media (max-width: 700px) {
     position: absolute;

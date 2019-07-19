@@ -13,15 +13,16 @@ export default SectionTitle;
 
 const StyledHeading = styled.h1`
   font-size: 48px;
-  margin: 32px 0 32px 0;
+  margin: 64px 0 64px 0;
   text-transform: uppercase;
   color: var(--heading-dark);
 
   @media (max-width: 800px) {
-    font-size: 36px;
+    font-size: 40px;
   }
 
   @media (max-width: 500px) {
+    margin: 36px 0 36px 0;
     font-size: 30px;
   }
 `;
