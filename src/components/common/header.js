@@ -161,6 +161,7 @@ const CallInfoTop = styled.p`
 const CallInfoBottom = styled.p`
   font-size: 20px;
   margin: 0;
+  text-decoration: none;
 
   @media screen and (max-width: 500px) {
     font-size: 16px;
