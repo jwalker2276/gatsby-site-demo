@@ -4,7 +4,7 @@ module.exports = {
     description: "",
     author: "Jordan Walker",
     name: "DownShift",
-    phone: "1-888-331-4517",
+    phone: "1-888-888-8888",
     email: "shop@downshift.com",
     address: "P.O. Box 446",
     youtube: "https://www.youtube.com",

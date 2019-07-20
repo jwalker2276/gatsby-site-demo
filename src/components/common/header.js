@@ -18,10 +18,19 @@ const Header = () => {
           instagram
           twitter
           facebook
+          phone
         }
       }
     }
   `);
+
+  const {
+    youtube,
+    instagram,
+    twitter,
+    facebook,
+    phone,
+  } = data.site.siteMetadata;
 
   return (
     <HeaderWrapper>
@@ -32,26 +41,26 @@ const Header = () => {
         <HeaderRight>
           <CallInfoWrapper>
             <CallInfoTop>Call Now</CallInfoTop>
-            <CallInfoBottom>1-895-331-4517</CallInfoBottom>
+            <CallInfoBottom href={`$tel:{phone}`}>{phone}</CallInfoBottom>
           </CallInfoWrapper>
           <SocialIconsWrapper>
             <SocialIcon
-              iconLink={data.site.siteMetadata.youtube}
+              iconLink={youtube}
               iconImage={youtubeIcon}
               iconName="youtube"
             />
             <SocialIcon
-              iconLink={data.site.siteMetadata.instagram}
+              iconLink={instagram}
               iconImage={instagramIcon}
               iconName="instagram"
             />
             <SocialIcon
-              iconLink={data.site.siteMetadata.twitter}
+              iconLink={twitter}
               iconImage={twitterIcon}
               iconName="twitter"
             />
             <SocialIcon
-              iconLink={data.site.siteMetadata.facebook}
+              iconLink={facebook}
               iconImage={facebookIcon}
               iconName="facebook"
             />
@@ -158,10 +167,11 @@ const CallInfoTop = styled.p`
   color: var(--red-light);
 `;
 
-const CallInfoBottom = styled.p`
+const CallInfoBottom = styled.a`
   font-size: 20px;
   margin: 0;
   text-decoration: none;
+  color: var(--body-light);
 
   @media screen and (max-width: 500px) {
     font-size: 16px;
