@@ -41,7 +41,13 @@ const Header = () => {
         <HeaderRight>
           <CallInfoWrapper>
             <CallInfoTop>Call Now</CallInfoTop>
-            <CallInfoBottom href={`$tel:{phone}`}>{phone}</CallInfoBottom>
+            <CallInfoBottom
+              href="https://www.jordanwalker.dev"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              {phone}
+            </CallInfoBottom>
           </CallInfoWrapper>
           <SocialIconsWrapper>
             <SocialIcon
