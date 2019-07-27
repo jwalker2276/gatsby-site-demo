@@ -165,7 +165,7 @@ const FormButton = styled.button`
   font-size: 18px;
   font-family: "Nunito", "sans-serif";
   font-weight: 700;
-  color: var(--body-light-t);
+  color: var(--body-light);
   background: var(--red-base);
   border: none;
   border: 2px solid var(--red-dark);

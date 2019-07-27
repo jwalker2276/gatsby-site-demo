@@ -39,6 +39,6 @@ const FooterText = styled.p`
 `;
 
 const ExternalLink = styled.a`
-  color: var(--red-base);
+  color: var(--red-light);
   text-decoration: none;
 `;
