@@ -72,7 +72,7 @@ const BottomNav = () => {
               <StyledNavLink to="/about">About</StyledNavLink>
             </ListItem>
             <ListItem>
-              <StyledNavLink to="/cars">Cars</StyledNavLink>
+              <StyledNavLink to="/cars">Cars and Projects</StyledNavLink>
             </ListItem>
             <ListItem>
               <StyledNavLink to="/contact">Contact</StyledNavLink>
