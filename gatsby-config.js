@@ -16,6 +16,12 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: "gatsby-plugin-html-attributes",
+      options: {
+        lang: "en",
+      },
+    },
+    {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: "src/utils/typography",
