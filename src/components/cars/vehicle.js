@@ -62,7 +62,11 @@ const Vehicle = ({ vehicleData }) => {
           Power: <HighlightedText>{dynoSpecs_HP}</HighlightedText> hp /{" "}
           <HighlightedText> {dynoSpecs_T} </HighlightedText> lb-ft
         </HorsePowerText>
-        <StyledNavLink to="/contact">Check Availability</StyledNavLink>
+        {isSold === "true" && <SoldNavLink to="/cars">Sold</SoldNavLink>}
+        {isSold === "false" && (
+          <StyledNavLink to="/contact">Check Availability</StyledNavLink>
+        )}
+
         <SmallHeading>About</SmallHeading>
         <div>
           <DescriptionBox>{shopNotes}</DescriptionBox>
@@ -191,6 +195,26 @@ const StyledNavLink = styled(props => <Link {...props} />)`
     box-shadow: 2px 8px 2px 0px var(--shadow), 2px 8px 15px 0px var(--shadow);
     transform: translate(0px, -2px);
   }
+
+  @media screen and (max-width: 1160px) {
+    font-size: 16px;
+    padding: 12px 0px;
+  }
+`;
+
+const SoldNavLink = styled(props => <Link {...props} />)`
+  justify-self: center;
+  font-size: 18px;
+  color: var(--red-darkest);
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 16px 0px;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 10px;
+  border: 2px solid var(--red-darkest);
+  width: 100%;
+  margin-bottom: 32px;
 
   @media screen and (max-width: 1160px) {
     font-size: 16px;
