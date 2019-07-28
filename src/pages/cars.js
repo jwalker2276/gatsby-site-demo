@@ -3,6 +3,7 @@ import Layout from "../components/common/layout";
 import GlobalStyle from "../components/common/global";
 import styled from "styled-components";
 import SectionTitle from "../components/common/section-title";
+import Vehicles from "../components/cars/vehicles";
 
 const Cars = () => (
   <>
@@ -10,7 +11,8 @@ const Cars = () => (
     <Layout>
       <Section>
         <SectionWrapper>
-          <SectionTitle titleText="Coming Soon..." />
+          <SectionTitle titleText="Vehicles for Sale" />
+          <Vehicles />
         </SectionWrapper>
       </Section>
     </Layout>
@@ -27,7 +29,7 @@ const Section = styled.section`
 const SectionWrapper = styled.div`
   display: grid;
   grid-template: auto 1fr / 1fr;
-  padding: 64px 16px;
+  padding: 0 16px 64px 16px;
   width: 100%;
   max-width: 1440px;
   margin: auto;
