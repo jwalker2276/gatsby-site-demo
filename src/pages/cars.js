@@ -35,7 +35,7 @@ const SectionWrapper = styled.div`
   margin: auto;
 
   @media screen and (max-width: 500px) {
-    padding: 0px 4px;
+    padding: 0px 8px;
     grid-template: 1fr / 1fr;
   }
 `;

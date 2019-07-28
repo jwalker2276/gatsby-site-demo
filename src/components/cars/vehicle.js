@@ -18,9 +18,9 @@ const Vehicle = ({ vehicleData }) => {
     drivetrain,
     exteriorColor,
     interiorColor,
-    sellerNotes,
     shopNotes,
-    dynoSpecs,
+    dynoSpecs_HP,
+    dynoSpecs_T,
     image,
     isSold,
     isConsignment,
@@ -36,7 +36,7 @@ const Vehicle = ({ vehicleData }) => {
       <CardBottom>
         {isConsignment === "false" && (
           <BuildInHouseBanner>
-            <BannerText>Built In House</BannerText>
+            <BannerText>Improved In House</BannerText>
           </BuildInHouseBanner>
         )}
         <Price>${price}</Price>
@@ -59,14 +59,13 @@ const Vehicle = ({ vehicleData }) => {
           </InfoRight>
         </GeneralInfoWrapper>
         <HorsePowerText>
-          Tested Horsepower: <HighlightedText>{dynoSpecs}</HighlightedText> whp
+          Power: <HighlightedText>{dynoSpecs_HP}</HighlightedText> hp /{" "}
+          <HighlightedText> {dynoSpecs_T} </HighlightedText> lb-ft
         </HorsePowerText>
         <StyledNavLink to="/contact">Check Availability</StyledNavLink>
-
         <SmallHeading>About</SmallHeading>
         <div>
-          <p>{sellerNotes}</p>
-          <p>{shopNotes}</p>
+          <DescriptionBox>{shopNotes}</DescriptionBox>
         </div>
         {/* <p>{views}</p> */}
         <GeneralText>Date Added : {creationDate}</GeneralText>
@@ -87,7 +86,7 @@ const CardWrapper = styled.div`
 const CardTop = styled.div``;
 
 const CardImg = styled.img`
-  max-width: 450px;
+  width: 100%;
   border-radius: 5px;
   margin-bottom: 0;
 `;
@@ -95,7 +94,7 @@ const CardImg = styled.img`
 const CardBottom = styled.div`
   position: relative;
   display: grid;
-  max-width: 430px;
+  width: 95%;
   border-radius: 5px;
   background-color: var(--neut-lightest);
   box-shadow: 2px 3px 2px 0px var(--shadow), 2px 8px 10px 0px var(--shadow);
@@ -122,15 +121,31 @@ const SpanInfo = styled.span`
 const GeneralInfoWrapper = styled.div`
   display: grid;
   grid-template-columns: auto 1fr;
-  grid-column-gap: 16px;
+  grid-column-gap: 50px;
   margin: 0 0 12px 0;
+
+  @media screen and (max-width: 1365px) {
+    grid-column-gap: 25px;
+  }
+
+  @media screen and (max-width: 1300px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 const InfoLeft = styled.div`
   grid-column: 1 / 2;
+
+  @media screen and (max-width: 1300px) {
+    grid-column: 1 / -1;
+  }
 `;
 const InfoRight = styled.div`
   grid-column: 2 / -1;
+
+  @media screen and (max-width: 1300px) {
+    grid-column: 1 / -1;
+  }
 `;
 
 const GeneralText = styled.p`
@@ -149,6 +164,11 @@ const HorsePowerText = styled.h4`
 
 const HighlightedText = styled.span`
   color: var(--red-dark);
+`;
+
+const DescriptionBox = styled.p`
+  min-height: 300px;
+  margin-bottom: 0;
 `;
 
 const StyledNavLink = styled(props => <Link {...props} />)`
@@ -176,20 +196,6 @@ const StyledNavLink = styled(props => <Link {...props} />)`
     font-size: 16px;
     padding: 12px 0px;
   }
-
-  @media screen and (max-width: 960px) {
-    grid-column: 2 / -1;
-    grid-row: 1 / -1;
-    margin-bottom: 0;
-    justify-self: right;
-    margin-right: 16px;
-    font-size: 14px;
-    padding: 12px 0;
-  }
-
-  @media screen and (max-width: 500px) {
-    margin-right: 8px;
-  }
 `;
 
 const BuildInHouseBanner = styled.div`
@@ -207,4 +213,8 @@ const BannerText = styled.h5`
   padding: 18px 24px;
   border-radius: 5px;
   box-shadow: 2px 3px 2px 0px var(--shadow), 2px 8px 10px 0px var(--shadow);
+
+  @media screen and (max-width: 768px) {
+    font-size: 16px;
+  }
 `;

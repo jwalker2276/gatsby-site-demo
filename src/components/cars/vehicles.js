@@ -35,4 +35,12 @@ const VehiclesGrid = styled.div`
   padding: 16px 0 0 0;
   border-top: 2px solid var(--shadow);
   border-bottom: 2px solid var(--shadow);
+
+  @media screen and (max-width: 1100px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
 `;
