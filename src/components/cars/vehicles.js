@@ -9,7 +9,6 @@ const Vehicles = () => {
   const [vehicles, updateVehicles] = useState([]);
 
   useEffect(() => {
-    console.log("fetched vehicle data");
     const tempVehicles = JSON.parse(JSON.stringify(jsonData));
 
     // Update State
