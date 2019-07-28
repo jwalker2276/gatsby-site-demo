@@ -21,7 +21,8 @@ const Vehicle = ({ vehicleData }) => {
     shopNotes,
     dynoSpecs_HP,
     dynoSpecs_T,
-    image,
+    image_m,
+    image_s,
     isSold,
     isConsignment,
     views,
@@ -31,7 +32,10 @@ const Vehicle = ({ vehicleData }) => {
   return (
     <CardWrapper>
       <CardTop>
-        <CardImg src={image} alt={model} />
+        <picture>
+          <CardSource srcSet={image_s} media="(max-width: 500px)" />
+          <CardImg src={image_m} alt={model} />
+        </picture>
       </CardTop>
       <CardBottom>
         {isConsignment === "false" && (
@@ -88,6 +92,12 @@ const CardWrapper = styled.div`
 `;
 
 const CardTop = styled.div``;
+
+const CardSource = styled.source`
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 0;
+`;
 
 const CardImg = styled.img`
   width: 100%;

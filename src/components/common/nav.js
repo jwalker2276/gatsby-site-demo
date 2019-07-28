@@ -48,7 +48,7 @@ const Nav = () => {
     return (
       <NavWrapper>
         <SocialIconGroup />
-        <MobileMenuButton onClick={handleMenuButton}>
+        <MobileMenuButton onClick={handleMenuButton} aria-label="Toggle Menu">
           <MobileMenuLineTop menuIsOpen={isOpen} />
           <MobileMenuLineBottom menuIsOpen={isOpen} />
         </MobileMenuButton>
